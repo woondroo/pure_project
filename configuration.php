@@ -9,11 +9,11 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysql';
-	public $host = 'localhost';
-	public $user = 'root';
-	public $password = 'greenwen';
-	public $db = 'www_purejoomla';
-	public $dbprefix = 'jos_';
+	public $host = 'dbhost';
+	public $user = 'dbuser';
+	public $password = 'dbpass';
+	public $db = 'dbname';
+	public $dbprefix = 'db_prefix';
 	public $live_site = '';
 	public $secret = 'XsAyy9EM7ci8pel9';
 	public $gzip = '0';
@@ -40,8 +40,8 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '60';
-	public $MetaDesc = '网站说明';
-	public $MetaKeys = '网站关键词';
+	public $MetaDesc = 'Site description';
+	public $MetaKeys = 'Site keywords';
 	public $MetaAuthor = '1';
 	public $sef = '1';
 	public $sef_rewrite = '1';
@@ -53,7 +53,7 @@ class JConfig {
 	public $lifetime = '60';
 	public $session_handler = 'database';
 	public $MetaRights = '';
-	public $record = '©2008-2012 Woondroo Site Build 蜀ICP备08018868号 [a target=_blank href=http://www.d-niu.com]Power by Woondroo[/a]';
+	public $record = '©2008-2013 Woondroo Site Build';
 	public $sitename_pagetitles = '0';
 	public $force_ssl = '0';
 	public $feed_email = 'author';
@@ -83,6 +83,6 @@ class JConfig {
 	public $memcache_server_port = '11211';
 	public $site_model = '1';
 	public $material_board_size = '40';
-	public $material_board_C = 'images/img/config/40px模板-113Q-第1套模板-C副本-切图6-1342515690.png';
+	public $material_board_C = 'image.png';
 	public $pagination_lrbt_width = '51px';
 }
