@@ -2,7 +2,7 @@
 class JConfig {
 	public $offline = '0';
 	public $offline_message = '本站正在维护中，暂不能访问。<br /> 请稍后再访问本站。';
-	public $sitename = 'Pure Joomla';
+	public $sitename = 'Pure Project by WOONDROO';
 	public $editor = 'jckeditor';
 	public $list_limit = '20';
 	public $access = '1';
@@ -18,7 +18,7 @@ class JConfig {
 	public $secret = 'XsAyy9EM7ci8pel9';
 	public $gzip = '0';
 	public $error_reporting = '7';
-	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help16:{keyref}';
+	public $helpurl = '';
 	public $ftp_host = '127.0.0.1';
 	public $ftp_port = '21';
 	public $ftp_user = '';
@@ -28,12 +28,12 @@ class JConfig {
 	public $offset = 'Asia/Shanghai';
 	public $offset_user = 'UTC';
 	public $mailer = 'smtp';
-	public $mailfrom = '1020205841@qq.com';
+	public $mailfrom = 'xxx@xx.com';
 	public $fromname = 'Woondroo';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '1';
-	public $smtpuser = '1020205841@qq.com';
-	public $smtppass = 'woondroo729x';
+	public $smtpuser = 'xxx@xx.com';
+	public $smtppass = '******';
 	public $smtphost = 'smtp.qq.com';
 	public $smtpsecure = 'none';
 	public $smtpport = '25';
