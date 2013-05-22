@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_inquirybox</name>
+	<author>Woondroo</author>
+	<creationDate>Janu 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>留言咨询</description>
+	<files>
+		<filename module="mod_inquirybox">mod_inquirybox.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_inquirybox.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_inquirybox.ini</language>
+		<language tag="en-GB">en-GB.mod_inquirybox.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_INQUIRYBOX" />
+</extension>

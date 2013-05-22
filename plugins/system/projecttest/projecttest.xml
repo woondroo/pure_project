@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.7" type="plugin" group="system">
+	<name>系统 - 网站测试</name>
+	<creationDate>November 2011</creationDate>
+	<author>wengebin</author>
+	<copyright>©2008-2012 Woondroo</copyright>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>
+		用于给网站测试时到计时，如果到期了，网站将不能再被访问。如果在模板文件要删除JOOMLA在前台自动导入的脚本mootools.js,caption.js，请用以下代码(否则插件不能正常工作)
+$headerstuff = $this->getHeadData();
+$temp=array();
+foreach($headerstuff['scripts'] as $scripts=>$type){
+	if(preg_match('/(mootools)|(caption)/',$scripts))continue;
+	$temp[$scripts]=$type;
+}
+$headerstuff['scripts']=$temp;
+$this->setHeadData($headerstuff);
+	</description>
+	<files>
+		<filename plugin="projecttest">projecttest.php</filename>
+		<filename>expire.php</filename>
+		<filename>jquery.js</filename>
+		<filename>testbox.jpg</filename>
+		<filename>testclose.jpg</filename>
+		<filename>testyes.jpg</filename>
+		<filename>testno.jpg</filename>
+		<filename>expirebg.jpg</filename>
+	</files>
+	<languages>
+		<language tag="zh-CN">zh-CN.plg_system_project_test.ini</language>
+		<language tag="zh-CN">zh-CN.plg_system_project_test.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" >
+			<fieldset name="basic">
+				<field name="expiredata" type="text" size="10" default="2010-02-01" label="到期日期" description="如果输入2010-02-10,测试日期将会到02月10日(包括)为止"></field>
+		 		<field name="makesure" type="text" size="50" default="http://" label="完成测试确认地址" description="如果客户测试完成，确认地址"></field>
+		 		<field name="advise" type="text" size="50" default="http://" label="完成测试提意见地址" description="如果客户测试完成，提意见地址"></field>
+		 		<field name="options" type="radio" default="0" label="提示面板显示方式" description="指定什么时候显示提示面板">
+					<option value="0">一次session(会话)，只显示一次</option>
+					<option value="1">任何页面永远显示</option>
+					<option value="2">只有首页显示</option>
+				</field>
+			
+			</fieldset>
+		</fields>
+	</config>
+</extension>

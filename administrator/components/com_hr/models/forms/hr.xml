@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_hr/models/rules"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+			default=""
+		/>
+		<field
+			name="title"
+			type="text"
+			label="COM_HR_HR_FIELD_TITLE_LABEL"
+			description="COM_HR_HR_FIELD_TITLE_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+		/>
+		<field
+			name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			class="inputbox"
+			size="45"
+		/>
+		<field name="desc" type="editor"
+			label="COM_HR_FIELD_DESC_LABEL"
+			description="COM_HR_FIELD_DESC_DESC"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true"
+			hide="readmore,pagebreak"
+		/>
+		<field name="require" type="editor"
+			label="COM_HR_FIELD_REQUIRE_LABEL"
+			description="COM_HR_FIELD_REQUIRE_DESC"
+			class="inputbox"
+			filter="safehtml"
+			buttons="true"
+			hide="readmore,pagebreak"
+		/>
+		<field 
+			name="addtime" 
+			type="calendar" 
+			label="COM_HR_HR_FIELD_ADDTIME_LABEL"
+			description="COM_HR_HR_FIELD_ADDTIME_DESC"
+			class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M:%S" 
+			filter="user_utc" 
+		/>
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			class="inputbox"
+			size="1"
+		/>
+		<field
+			name="catid"
+			type="category"
+			extension="com_hr"
+			class="inputbox"
+			default=""
+			label="COM_HR_HR_FIELD_CATID_LABEL"
+			description="COM_HR_HR_FIELD_CATID_DESC"
+			required="true"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		<field
+			name="language"
+			type="contentlanguage"
+			label="JFIELD_LANGUAGE_LABEL"
+			description="COM_HR_FIELD_LANGUAGE_DESC"
+			class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+		<field
+			name="published"
+			type="radio"
+			default="1"
+			label="COM_HR_HR_FIELD_PUBLISHED_LABEL"
+			description="COM_HR_HR_FIELD_PUBLISHED_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		<field
+			name="ordering"
+			type="text"
+			label="COM_HR_HR_FIELD_ORDERING_LABEL"
+			description="COM_HR_HR_FIELD_ORDERING_DESC"
+			size="40"
+			class="inputbox"
+			default="0"
+			required="true"
+		/>
+		</fieldset>
+	<fields name="params">
+		<fieldset
+			name="params"
+			label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS"
+		>
+			<field
+				name="show_category"
+				type="list"
+				label="COM_HR_HR_FIELD_SHOW_CATEGORY_LABEL"
+				description="COM_HR_HR_FIELD_SHOW_CATEGORY_DESC"
+				default=""
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

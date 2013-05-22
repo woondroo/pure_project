@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="language" version="1.7.0" client="site">
+	<name>繁體中文 - 前台</name>
+	<tag>zh-TW</tag>
+  <version>1.7.0</version>
+  <creationDate>2006-12-10</creationDate>
+  <author>TaiwanJoomla</author>
+  <authorEmail></authorEmail>
+  <description>網站前台繁體中文語言檔案</description>
+  <files>
+    <file file="meta">zh-TW.xml</file>
+    <file>zh-TW.com_banners.ini</file>
+    <file>zh-TW.com_contact.ini</file>
+    <file>zh-TW.com_content.ini</file>
+    <file>zh-TW.com_frontpage.ini</file>
+    <file>zh-TW.com_login.ini</file>
+    <file>zh-TW.com_mailto.ini</file>
+    <file>zh-TW.com_messages.ini</file>
+    <file>zh-TW.com_newsfeeds.ini</file>
+    <file>zh-TW.com_poll.ini</file>
+    <file>zh-TW.com_registration.ini</file>
+    <file>zh-TW.com_search.ini</file>
+    <file>zh-TW.com_user.ini</file>
+    <file>zh-TW.com_weblinks.ini</file>
+    <file>zh-TW.com_wrapper.ini</file>
+    <file>zh-TW.ignore.php</file>
+    <file>zh-TW.ini</file>
+    <file>zh-TW.mod_archive.ini</file>
+    <file>zh-TW.mod_banners.ini</file>
+    <file>zh-TW.mod_breadcrumbs.ini</file>
+    <file>zh-TW.mod_custom.ini</file>
+    <file>zh-TW.mod_feed.ini</file>
+    <file>zh-TW.mod_footer.ini</file>
+    <file>zh-TW.mod_latestnews.ini</file>
+    <file>zh-TW.mod_login.ini</file>
+    <file>zh-TW.mod_mainmenu.ini</file>
+    <file>zh-TW.mod_mostread.ini</file>
+    <file>zh-TW.mod_newsflash.ini</file>
+    <file>zh-TW.mod_poll.ini</file>
+    <file>zh-TW.mod_random_image.ini</file>
+    <file>zh-TW.mod_related_items.ini</file>
+    <file>zh-TW.mod_search.ini</file>
+    <file>zh-TW.mod_sections.ini</file>
+    <file>zh-TW.mod_stats.ini</file>
+    <file>zh-TW.mod_syndicate.ini</file>
+    <file>zh-TW.mod_whosonline.ini</file>
+    <file>zh-TW.mod_wrapper.ini</file>
+    <file>zh-install.xml</file>
+    <file>index.html</file>
+  </files>
+</install>

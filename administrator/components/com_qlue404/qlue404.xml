@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>Qlue 404</name>
+	<creationDate>April 2011</creationDate>
+    <author>Aaron Harding</author>
+    <authorEmail>support@qlue.info</authorEmail>
+    <authorUrl>http://www.qlue.co.uk</authorUrl>
+    <copyright>Copyright (C) 2011 Qlue Ltd. All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <version>1.6.3</version>
+    <description>COM_QLUE404_DESCRIPTION</description>
+    
+    <install>
+    	<sql>
+    		<file driver="mysql" charset="utf8">sql/install.qlue404.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.qlue404.sql</file>
+        </sql>
+    </uninstall>
+    
+    <scriptfile>script.php</scriptfile>
+ 
+    <files folder="components/com_qlue404/">
+        <filename>index.html</filename>
+        <filename>qlue404.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>error</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+	</files>
+ 
+    <administration>
+
+	    <menu img="components/com_qlue404/assets/images/qlue_logo.png">COM_QLUE404_MENU</menu>
+	    
+	    <files folder="administrator/components/com_qlue404/">
+	    	<filename>index.html</filename>
+	        <filename>qlue404.php</filename>
+	        <filename>controller.php</filename>
+	        <folder>assets</folder>
+	        <folder>controllers</folder>
+	        <folder>helpers</folder>
+	        <folder>models</folder>
+	        <folder>tables</folder>
+	        <folder>views</folder>
+	        <folder>sql</folder>
+	    </files>
+	    
+	    <languages folder="administrator/languages/en-GB/">
+			<language tag="en-GB">en-GB.com_qlue404.ini</language>
+			<language tag="en-GB">en-GB.com_qlue404.sys.ini</language>
+		</languages>
+            
+    </administration>
+    
+    <plugins>
+	   <plugin plugin="qlue404" group="system" />
+    </plugins>
+</extension>

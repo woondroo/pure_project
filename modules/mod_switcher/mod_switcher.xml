@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_switcher</name>
+	<author>Woondroo</author>
+	<creationDate>Nov 2011</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>图片切换模块</description>
+	<files>
+		<filename module="mod_switcher">mod_switcher.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_switcher.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_switcher.ini</language>
+		<language tag="en-GB">en-GB.mod_switcher.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_BANNERINDEX" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="switcherfill" type="switcherfill"
+					default="switcher-h-whp"
+					label="排列方式"
+					description="选择排列方式"
+					required="true">
+					
+					<option id="1" src="templates/system/images/switcherfill/switcher_h_whp.png" value="switcher-h-whp" params="{show:1,showanims:'1',show_pagination_bts:0,animway:1,use100:1,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:0,isshowbt:0,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="全屏切换"></option>
+					<option id="2" src="templates/system/images/switcherfill/switcher_h_wip.png" value="switcher-h-wip" params="{show:1,showanims:'1',show_pagination_bts:0,animway:1,use100:1,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:0,isshowbt:0,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="自动全屏宽度切换"></option>
+					<option id="3" src="templates/system/images/switcherfill/switcher_h_a.png" value="switcher-h-a" params="{show:1,showanims:'0-1-2-3-4-5',show_pagination_bts:0,animway:1,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:0,isshowbt:1,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="切换+箭头"></option>
+					<option id="4" src="templates/system/images/switcherfill/switcher_h_n.png" value="switcher-h-n" params="{show:1,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:1,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:0,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="切换+编号按钮"></option>
+					<option id="5" src="templates/system/images/switcherfill/switcher_h_nimg.png" value="switcher-h-nimg" params="{show:1,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:1,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:1,pagebtshownum:0,isshowbt:0,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="切换+编号图片按钮"></option>
+					<option id="6" src="templates/system/images/switcherfill/switcher_h_an.png" value="switcher-h-an" params="{show:1,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:1,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="切换+箭头+编号按钮"></option>
+					<option id="7" src="templates/system/images/switcherfill/switcher_h_at.png" value="switcher-h-at" params="{show:1,showanims:'0-1-2-3-4-5',show_pagination_bts:0,animway:1,use100:0,itemshowtitle:1,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:0,isshowbt:1,decoration:0,showview:0,showdesc:0,pagebtposx:2,pagebtposy:3}" title="切换+箭头+标题"></option>
+					<option id="8" src="templates/system/images/switcherfill/switcher_sn_n.png" value="switcher-sn-n" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:0,showview:1,showdesc:0,pagebtposx:2,pagebtposy:3}" title="图片浏览切换"></option>
+					<option id="9" src="templates/system/images/switcherfill/switcher_sn_nd.png" value="switcher-sn-nd" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:0,showview:1,showdesc:1,pagebtposx:2,pagebtposy:3}" title="图片浏览切换+描述"></option>
+					<option id="10" src="templates/system/images/switcherfill/switcher_sn_ntd.png" value="switcher-sn-ntd" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:1,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:0,showview:1,showdesc:1,pagebtposx:2,pagebtposy:3}" title="图片浏览切换+标题+描述"></option>
+					<option id="11" src="templates/system/images/switcherfill/switcher_sr_n.png" value="switcher-sr-n" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:1,showview:1,showdesc:0,pagebtposx:3,pagebtposy:2}" title="右侧图片切换"></option>
+					<option id="12" src="templates/system/images/switcherfill/switcher_sr_nd.png" value="switcher-sr-nd" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:1,showview:1,showdesc:1,pagebtposx:3,pagebtposy:2}" title="右侧图片切换+描述"></option>
+					<option id="13" src="templates/system/images/switcherfill/switcher_sr_ntd.png" value="switcher-sr-ntd" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:1,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:1,showview:1,showdesc:1,pagebtposx:3,pagebtposy:2}" title="右侧图片切换+标题+描述"></option>
+					<option id="14" src="templates/system/images/switcherfill/switcher_sl_n.png" value="switcher-sl-n" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:1,showview:1,showdesc:0,pagebtposx:1,pagebtposy:2}" title="左侧图片切换"></option>
+					<option id="15" src="templates/system/images/switcherfill/switcher_sl_nd.png" value="switcher-sl-nd" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:0,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:1,showview:1,showdesc:1,pagebtposx:1,pagebtposy:2}" title="左侧图片切换+描述"></option>
+					<option id="16" src="templates/system/images/switcherfill/switcher_sl_ntd.png" value="switcher-sl-ntd" params="{show:5,showanims:'0-1-2-3-4-5',show_pagination_bts:1,animway:0,use100:0,itemshowtitle:1,pagebt:1,auto:1,pagebtuseimg:0,pagebtshownum:1,isshowbt:1,decoration:1,showview:1,showdesc:1,pagebtposx:1,pagebtposy:2}" title="左侧图片切换+标题+描述"></option>
+				</field>
+				
+				<field
+					name="animway"
+					type="radio"
+					default="0"
+					label="切换动画的效果"
+					description="获得图片的切换方式，默认为移动切换，可设置为渐显/渐隐切换">
+					<option value="0">移动</option>
+					<option value="1">显隐</option>
+					<option value="2">左侧覆盖</option>
+					<option value="3">右侧覆盖</option>
+					<option value="4">顶部覆盖</option>
+					<option value="5">底部覆盖</option>
+				</field>
+				<field
+					name="show_pagination_bts"
+					type="radio"
+					default="1"
+					label="显示分页按钮"
+					description="是否显示分页按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="resource"
+					type="text"
+					default="switchcontent"
+					label="数据来源"
+					description="填写数据来源(表后缀，比如 jos_product 填写 product)">
+				</field>
+				<field name="alias"
+					type="text"
+					default=""
+					description="填写别名"
+					label="别名">
+				</field>
+				<field name="catid"
+					type="category"
+					default="0"
+					description="选择分类"
+					extension="com_switchcontent"
+					label="分类">
+				</field>
+				<field
+					name="show"
+					type="text"
+					default="5"
+					label="每页显示数量"
+					description="每页显示数据的数量">
+				</field>
+				<field
+					name="showlimit"
+					type="text"
+					default="-1"
+					label="限制显示数量"
+					description="限制展示的数据数量不能超过该值">
+				</field>
+				<field
+					name="movetime"
+					type="text"
+					default="500"
+					label="切换动画时间(毫秒)"
+					description="控制切换列表左右切换、渐显渐隐的动画时间">
+				</field>
+				<field
+					name="autotime"
+					type="text"
+					default="3000"
+					label="自动切换动画间隔(毫秒)"
+					description="自动播放时，动画间隔时间">
+				</field>
+				<field
+					name="switcherbg"
+					type="text"
+					default=""
+					label="切换区域大背景图"
+					description="设置切换区域大背景图"
+					size="10">
+				</field>
+				<field
+					name="itembg"
+					type="text"
+					default=""
+					label="切换元素背景图"
+					description="设置切换元素背景图"
+					size="10">
+				</field>
+				<field
+					name="use100"
+					type="radio"
+					default="0"
+					label="动画强制全屏展示"
+					description="强制动画播放组件100%显示，以达到全屏效果">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="use100min"
+					type="text"
+					default="960px"
+					label="全屏展示最小宽度"
+					description="设置全屏展示最小宽度，否则页面布局会错乱">
+				</field>
+				<field
+					name="iteminnerwidth"
+					type="text"
+					default="100px"
+					label="切换元素内框宽度"
+					description="设置切换元素内框宽度">
+				</field>
+				<field
+					name="iteminnerheight"
+					type="text"
+					default="60px"
+					label="切换元素内框高度"
+					description="设置切换元素内框高度">
+				</field>
+				<field
+					name="itemouterwidth"
+					type="text"
+					default="110px"
+					label="切换元素外框宽度"
+					description="设置切换元素外框宽度">
+				</field>
+				<field
+					name="itemouterheight"
+					type="text"
+					default="70px"
+					label="切换元素外框高度"
+					description="设置切换元素外框高度">
+				</field>
+				<field
+					name="itemshowtitle"
+					type="radio"
+					default="0"
+					label="切换元素显示标题"
+					description="切换元素底部是否显示标题">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="itemtitleheight"
+					type="text"
+					default="20px"
+					label="切换元素标题高度"
+					description="设置切换元素底部标题的高度">
+				</field>
+				<field
+					name="usea"
+					type="radio"
+					default="1"
+					label="元素强制使用 A 标签"
+					description="给切换元素是否强制使用 A 标签，有链接则会使用链接，无链接则为javascript:void(0);">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="openlink"
+					type="radio"
+					default="0"
+					label="元素是否开启链接"
+					description="是否给元素的缩略图添加链接，比如首页Banner、内页Banner需要链接时可以打开">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="pagebt"
+					type="radio"
+					default="1"
+					label="开启分页切换(请保持开启)"
+					description="底部圆点切换开关，一次切换一页(如果想分页按钮不显示，请在第三个选项“显示分页按钮”设置为“否”)">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="auto"
+					type="radio"
+					default="0"
+					label="开启自动切换(需开启分页切换)"
+					description="动画是否自动播放">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="pagebtbg"
+					type="text"
+					default=""
+					label="分页按钮背景图"
+					description="设置分页按钮的背景图"
+					size="10">
+				</field>
+				<field
+					name="pagebtuseimg"
+					type="radio"
+					default="0"
+					label="分页完全使用图片"
+					description="分页是否按钮完全使用图片">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="pagebtshownum"
+					type="radio"
+					default="0"
+					label="分页按钮显示数字"
+					description="是否显示分页按钮上的数字">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="pagebtwidth"
+					type="text"
+					default="60px"
+					label="分页切换按钮宽度"
+					description="设置分页切换按钮宽度">
+				</field>
+				<field
+					name="pagebtheight"
+					type="text"
+					default="10px"
+					label="分页切换按钮高度"
+					description="设置分页切换按钮高度">
+				</field>
+				<field
+					name="pagebtm"
+					type="text"
+					default="5px"
+					label="分页切换的间距"
+					description="设置分页切换按的间距">
+				</field>
+				<field
+					name="pagebtposx"
+					type="radio"
+					default="2"
+					label="分页按钮组水平位置"
+					description="设置分页按钮组水平位置，可以自动居左/居右/居中显示">
+					<option value="1">居左</option>
+					<option value="2">居中</option>
+					<option value="3">居右</option>
+				</field>
+				<field
+					name="pagebtposy"
+					type="radio"
+					default="3"
+					label="分页按钮组垂直位置"
+					description="设置分页按钮组垂直位置，可以自动顶部/底部/居中显示">
+					<option value="1">顶部</option>
+					<option value="2">居中</option>
+					<option value="3">底部</option>
+				</field>
+				<field
+					name="pagebtmx"
+					type="text"
+					default="0px"
+					label="分页按钮组水平偏移"
+					description="设置分页按钮组与边界之间的水平偏移，比如选择居左，偏移量为10px，那么按钮组则会距离左侧边界10px；居右则是相对右侧边界而言；居中则无影响">
+				</field>
+				<field
+					name="pagebtmy"
+					type="text"
+					default="0px"
+					label="分页按钮组垂直偏移"
+					description="设置分页按钮组与边界之间的垂直偏移，比如选择顶部，偏移量为10px，那么按钮组则会距离顶部边界10px；底部则是相对底部边界而言；居中则无影响">
+				</field>
+				<field
+					name="autoactive"
+					type="radio"
+					default="0"
+					label="开启自动触发点击"
+					description="点击左右或者上下滚动时，是否自动触发上一个/下一个的点击事件，到达边界时再自动滚动">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="fadein"
+					type="radio"
+					default="1"
+					label="开启切换渐变"
+					description="切换移动时，过度动画会渐进渐出">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="isshowbt"
+					type="radio"
+					default="1"
+					label="是否显示左右切换"
+					description="设置是否在页面上显示左右切换的按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="hidebt"
+					type="radio"
+					default="0"
+					label="自动隐藏左右切换"
+					description="图片移动到边界，是否隐藏对应的按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="btbg"
+					type="text"
+					default=""
+					label="左右切换按钮背景图"
+					description="设置左右切换按钮背景图"
+					size="10">
+				</field>
+				<field
+					name="btwidth"
+					type="text"
+					default="20px"
+					label="左右切换按钮宽度"
+					description="设置左右切换按钮宽度">
+				</field>
+				<field
+					name="btheight"
+					type="text"
+					default="20px"
+					label="左右切换按钮高度"
+					description="设置左右切换按钮高度">
+				</field>
+				<field
+					name="btm1"
+					type="text"
+					default="0px"
+					label="左切换按钮左偏移/右切换按钮右偏移"
+					description="设置左切换按钮左偏移/右切换按钮右偏移，即左按钮距离左侧边界的距离和右按钮距离右侧边界的距离">
+				</field>
+				<field
+					name="btm2"
+					type="text"
+					default="0px"
+					label="左切换按钮右偏移/右切换按钮左偏移"
+					description="设置左切换按钮右偏移/右切换按钮左偏移，即左按钮距离右侧切换区域的距离和右按钮距离左侧切换区域的距离">
+				</field>
+				<field
+					name="decoration"
+					type="radio"
+					default="0"
+					label="切换动画的方向"
+					description="动画切换的方向，默认为左右切换，可设置垂直切换">
+					<option value="0">左右</option>
+					<option value="1">垂直</option>
+				</field>
+				<field
+					name="showview"
+					type="radio"
+					default="1"
+					label="是否使用预览"
+					description="是否开启大图预览区域">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showtime"
+					type="text"
+					default="500"
+					label="预览动画时间(毫秒)"
+					description="如果有大图预览区域，该参数控制预览区域渐显渐隐的时间">
+				</field>
+				<field
+					name="viewbg"
+					type="text"
+					default=""
+					label="预览区域大背景图"
+					description="设置预览区域大背景图"
+					size="10">
+				</field>
+				<field
+					name="viewwidth"
+					type="text"
+					default="600px"
+					label="预览区域宽度"
+					description="设置预览区域宽度">
+				</field>
+				<field
+					name="viewheight"
+					type="text"
+					default="400px"
+					label="预览区域高度"
+					description="设置预览区域高度">
+				</field>
+				<field
+					name="viewitemwidth"
+					type="text"
+					default="600px"
+					label="预览区域元素宽度"
+					description="设置预览区域元素宽度">
+				</field>
+				<field
+					name="viewitemheight"
+					type="text"
+					default="400px"
+					label="预览区域元素高度"
+					description="设置预览区域元素高度">
+				</field>
+				<field
+					name="showdesc"
+					type="radio"
+					default="0"
+					label="是否显示描述"
+					description="图片下方是否显示描述信息">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="descwidth"
+					type="text"
+					default="600px"
+					label="描述区域宽度"
+					description="设置描述区域宽度">
+				</field>
+				<field
+					name="descheight"
+					type="text"
+					default="60px"
+					label="描述区域高度"
+					description="设置描述区域高度">
+				</field>
+				<field
+					name="descm"
+					type="text"
+					default="10px"
+					label="描述区域上下补白"
+					description="设置描述区域上下的补白高度">
+				</field>
+				<field
+					name="descbg"
+					type="text"
+					default="#000"
+					label="描述区域背景颜色"
+					description="设置描述区域背景颜色">
+				</field>
+				<field
+					name="descopacity"
+					type="text"
+					default="20"
+					label="描述区域背景透明度"
+					description="设置描述区域背景透明度，用百分数表示，比如20%透明度填写20">
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

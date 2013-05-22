@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_logo</name>
+	<author>Woondroo</author>
+	<creationDate>Janu 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>Logo模块</description>
+	<files>
+		<filename module="mod_logo">mod_logo.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_logo.xml</filename>
+	</files>
+	<languages>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGO" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="logoimg"
+					type="media"
+					label="logo地址"
+					description="请上传logo"
+					default=""
+				/>
+				<field
+					name="text"
+					type="text"
+					default="Logo"
+					label="Logo替代文字"
+					description="在没有图片的情况下可以将logo用文字替代之">
+				</field>
+				<field
+					name="showtext"
+					type="radio"
+					default="0"
+					label="是否显示文字"
+					description="是否显示logo中的文字(如果没有logo可以设置为显示)">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="width"
+					type="text"
+					default="240px"
+					label="Logo区域宽度"
+					description="Logo显示区域的宽度，可设置百分比">
+				</field>
+				<field
+					name="height"
+					type="text"
+					default="50px"
+					label="Logo区域高度"
+					description="Logo显示区域的高度，可设置百分比">
+				</field>
+				<field
+					name="left"
+					type="text"
+					default=""
+					label="Logo左偏移"
+					description="Logo距离左边边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="right"
+					type="text"
+					default=""
+					label="Logo右偏移(优先)"
+					description="Logo距离右边边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="top"
+					type="text"
+					default=""
+					label="Logo顶部偏移"
+					description="Logo距离顶部边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="bottom"
+					type="text"
+					default=""
+					label="Logo底部偏移(优先)"
+					description="Logo距离底部边界的距离是多少，可设置百分比">
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

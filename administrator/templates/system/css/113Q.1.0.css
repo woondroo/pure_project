@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+/**
+ * @version		1.0
+ * @package		Joomla.Administrator
+ * @subpackage	templates.hathor
+ * @copyright	Copyright (C) 2008 - 2011 Woondroo, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @since		1.7
+ *
+ * Main CSS file for the 113Q BackEnd
+ */
+.width50{
+	width:50px;
+}
+
+.width80{
+	width:80px;
+}
+
+.width120{
+	width:120px;
+}
+
+.innerFrame{
+	padding:5px;
+	border:1px dashed #ccc;
+}
+
+.innerFrame .h1{
+	font-size:14px;
+	font-weight:bold;
+	padding:5px;
+	color:#585858;
+}
+
+.innerFrame table{
+	width:100%;
+	cellpadding:0;
+	cellspacing:0;
+	border:0;
+	border-spacing:0;
+}
+
+.innerFrame table tr th{
+	padding:5px;
+	text-align:center;
+}
+
+.innerFrame table tr td{
+	
+}
+
+.hasTheadBorder th{
+	border-top:1px solid #777;
+	border-bottom:1px solid #aaa;
+}
+
+body fieldset.adminform .checkbox_center_90{
+	margin:5px 38px;
+}
+
+.to_view_imgs,
+.to_delete_imgs,
+.to_add_integral,
+.to_backup{
+	text-decoration:none;
+	float:left;
+	display:block;
+	padding:6px 10px;
+	background:#6569FE;
+	color:#000 !important;
+	margin-left:10px;
+}
+.to_add_integral{
+	margin:0;
+}
+.to_add_integral_area{
+	display:block;
+	width:0px;
+	height:0px;
+	overflow:hidden;
+}
+.to_choise_pros:link{
+	text-decoration:none;
+	float:left;
+	display:block;
+	padding:6px 10px;
+	background:#F0F0F0;
+}
+.to_choise_pros:hover,
+.to_view_imgs:hover,
+.to_delete_imgs:hover,
+.to_add_integral:hover,
+.to_backup:hover{
+	background:#B9FE9A;
+}
+.to_choise_pros:active,
+.to_view_imgs:active,
+.to_delete_imgs:active,
+.to_add_integral:active,
+.to_backup:active,
+.to_backup.active{
+	background:#FEEF7E;
+}
+
+.choise_pros{
+	margin:5px 0 5px 125px;
+}
+
+.pitem{
+	border:1px solid #BBBBBB;
+	float:left;
+	margin:2px;
+	padding:3px 5px;
+	white-space:nowrap;
+}
+
+.cartdelete{
+	background:url(../images/ml/cartdelete.jpg) no-repeat scroll right 1px transparent;
+	line-height:15px;
+	padding-right:15px;
+	text-decoration:underline;
+}
+
+.cartdelete:hover{
+	background-position:right -13px;
+}
+
+.one_pro{float:left;background:#EFEFEF;border:1px solid #DFDFDF;padding:10px 10px 10px 0;width:305px;height:178px;}
+.one_pro textarea{width:205px;height:50px;padding:4px 5px;margin-top:10px;border:1px solid #E0E0E0;background:#FFF;}
+.one_pro span{display:block;margin:0;padding:0;}
+.one_pro .no_1{width:40px;padding-top:10px;padding-bottom:10px;text-align:center;font-size:50px;font-family:Geneva,sans-serif;color:#D0D0D0;}
+.one_pro .no_1 a{font-size:12px;display:block;padding:0 3px;margin:0 2px;line-height:22px;margin-top:20px;background:#FFF;}
+.one_pro .no_1 a:hover{background:#CFCFCF;color:#FFF;}
+.one_pro .no_2{width:260px;height:100%;}
+.pro_desc{vertical-align:top;padding-top:5px;}
+.no_2_img{width:100%;height:100px;}
+.execute_now{width:100%;line-height:30px;text-align:center;background:#CFCFCF;color:#FFF;}
+div.no_desc{height:108px;}
+#comp_preview_div{padding:10px 0;}
+
+.adminform .radio-input{
+	display:block;
+	float:left;
+	margin:3px;
+	height:18px;
+}
+.adminform .radio-label{
+	width:auto!important;
+	display:block;
+	float:left;
+	padding:3px 15px 3px 2px;
+	margin:0;
+	clear:none;
+}
+
+/*----------------- Assets set css start ------------------*/
+
+.adminform_assets .com_box,.adminform_assets .acls_box{
+	margin:12px 5px 13px;
+}
+
+.adminform_assets .com_comacls label{
+	width:100px;
+}
+
+.adminform_assets .com_acls label{
+	width:250px;
+}
+
+.adminform_assets .com_title{
+	position:absolute;
+	top:50%;
+	margin-top:-15px;
+	left:30px;
+}
+
+.adminform_assets .com_acls{
+	margin-left:300px;
+	border-left:1px solid #CFCFCF;
+	border-right:1px solid #CFCFCF;
+}
+
+.adminform_assets ul.com_0{
+	border-top:1px solid #CFCFCF;
+}
+
+.adminform_assets ul.com_0 li{
+	text-align:center;
+	font-weight:bold;
+}
+
+.adminform_assets ul{
+	width:910px;
+	padding:0 30px;
+	float:left;
+	position:relative;
+	border:1px solid #CFCFCF;
+	border-top:0px;
+}
+
+.adminform_assets ul li{
+	display:block;
+	width:300px;
+	line-height:30px;
+	float:left;
+	margin:0;
+}
+
+/*----------------- Assets set css end ------------------*/
+
+/*----------------- swfUpload css start ------------------*/
+
+div.fieldset {
+	border:  1px solid #afe14c;
+	margin: 10px 0;
+	padding: 20px 10px;
+}
+div.fieldset span.legend {
+	position: relative;
+	background-color: #FFF;
+	padding: 3px;
+	top: -30px;
+	font: 700 14px Arial, Helvetica, sans-serif;
+	color: #73b304;
+}
+
+div.flash {
+	width: 375px;
+	margin: 10px 5px;
+	border-color: #D9E4FF;
+	-moz-border-radius-topleft : 5px;
+	-webkit-border-top-left-radius : 5px;
+    -moz-border-radius-topright : 5px;
+    -webkit-border-top-right-radius : 5px;
+    -moz-border-radius-bottomleft : 5px;
+    -webkit-border-bottom-left-radius : 5px;
+    -moz-border-radius-bottomright : 5px;
+    -webkit-border-bottom-right-radius : 5px;
+}
+
+body input.btnCancel{
+	margin:0;
+}
+
+body object.swfupload{
+	float:left;
+}
+
+.fla_btn {
+	position: relative;
+}
+
+.fla_btn embed {
+	position: absolute;
+	z-index: 1;
+}
+
+#swfDiv {
+	z-index: 2;
+	height:29px;
+	position:absolute;
+	top:0;
+}
+
+.fla_btn_bt {
+	border: 1px solid #CCC;
+	width:66px;
+	text-align:center;
+	line-height: 26px;
+	background: #666aff;
+}
+
+/*----------------- swfUpload css end ------------------*/
+
+/*----------------- listway css start ------------------*/
+
+#listway_container,
+#autofill_container,
+#switcherfill_container,
+#listwayfill_container,
+#homelistfill_container{
+	display:block;
+	clear:both;
+	width:100%;
+}
+
+#listway_container .listway_item,
+#autofill_container .autofill_item,
+#switcherfill_container .switcherfill_item,
+#listwayfill_container .listwayfill_item,
+#homelistfill_container .homelistfill_item{
+	display:block;
+	float:left;
+	margin:0 13px 13px;
+	width:200px;
+	padding:6px;
+	height:110px;
+	background-color:#F0F0F0;
+}
+
+#listway_container .listway_item span,
+#autofill_container .autofill_item span,
+#switcherfill_container .switcherfill_item span,
+#listwayfill_container .listwayfill_item span,
+#homelistfill_container .homelistfill_item span{
+	display:block;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-color:#FFF;
+}
+
+#listway_container .active_item,
+#autofill_container .active_item,
+#switcherfill_container .active_item,
+#listwayfill_container .active_item,
+#homelistfill_container .active_item{
+	background-color:#969696;
+}
+
+/*----------------- listway css end --------------------*/

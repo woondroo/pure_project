@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_searchall</name>
+	<author>Woondroo</author>
+	<creationDate>Janu 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>查询指定组件下的数据</description>
+	<files>
+		<filename module="mod_searchall">mod_searchall.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_searchall.xml</filename>
+	</files>
+	<languages>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SEARCHALL" />
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field
+					name="searchmods"
+					type="text"
+					label="查询的组件名"
+					description="填写需要查询的组件名，舍弃组件名的“com_”部分，比如“com_product”只需要填写“product”即可"
+					size="40"
+					default="product"
+				/>
+				<field
+					name="searchfield"
+					type="text"
+					label="查询的字段名"
+					description="多个字段请用英文“,”隔开，会同时查询满足任何一个字段的所有数据"
+					size="40"
+					default="title"
+				/>
+				<field
+					name="searchshow"
+					type="text"
+					label="显示的字段名"
+					description="多个字段请用英文“,”隔开，这些字段将会展示在查询页面，格式为：“title:标题,description:描述”"
+					size="40"
+					default="title:标题"
+				/>
+				
+				<field
+					name="height"
+					type="text"
+					default="30px"
+					label="搜索区域高度"
+					description="设置搜索区域高度">
+				</field>
+				<field
+					name="inputwidth"
+					type="text"
+					default="150px"
+					label="输入区域宽度"
+					description="设置搜索关键词的输入区域宽度">
+				</field>
+				<field
+					name="inputheight"
+					type="text"
+					default="20px"
+					label="输入区域高度"
+					description="设置搜索关键词的输入区域高度">
+				</field>
+				<field
+					name="left"
+					type="text"
+					default=""
+					label="搜索区域左偏移"
+					description="搜索区域距离左边边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="right"
+					type="text"
+					default=""
+					label="搜索区域右偏移(优先)"
+					description="搜索区域距离右边边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="top"
+					type="text"
+					default=""
+					label="搜索区域顶部偏移"
+					description="搜索区域距离顶部边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="bottom"
+					type="text"
+					default=""
+					label="搜索区域底部偏移(优先)"
+					description="搜索区域距离底部边界的距离是多少，可设置百分比">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

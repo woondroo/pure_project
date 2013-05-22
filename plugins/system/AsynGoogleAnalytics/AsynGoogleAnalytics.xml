@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 
+version="1.5" type="plugin" group="system" method="update">
+  <name>System - Asynchronous Google Analytics</name>
+  <author>Peter Bui</author>
+  <creationDate>19th April 2010</creationDate>
+  <authorEmail>peter@pbwebdev.com.au</authorEmail>
+  <authorUrl>http://www.pbwebdev.com.au</authorUrl>
+  <version>1.0</version>
+  <copyright>Copyright (c) 2010 PB Web Development. All rights reserved.</copyright>
+  <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+  <description>Asynchronous Goolge analytics allows for a faster loading Google Analytics code and tracking. For more information please read - http://code.google.com/apis/analytics/docs/tracking/asyncTracking.html
+    
+    Please enable and configure this plugin in the plugin manager. Read the documentation at: http://www.pbwebdev.com.au/blog/asynchronous-google-analytics-plugin-for-joomla</description>
+  <files>
+    <filename plugin="AsynGoogleAnalytics">AsynGoogleAnalytics.php</filename>
+  </files>
+  <config>
+    <fields name="params" >
+      <fieldset name="basic">
+        <field name="code" type="text" default="UA-XXXXX-X" label="Google Analytics Web Property ID." description=" e.g. UA-12345-67. This code can be found in your Google Analytics account. Your site will not be tracked unless this code is entered."></field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

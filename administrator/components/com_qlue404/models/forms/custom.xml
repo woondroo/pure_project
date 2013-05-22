@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<form>
+	<fieldset>
+		<field name="id" type="text" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC" size="10" default="0" readonly="true" />
+		<field name="title" type="text" label="COM_QLUE404_CUSTOM_TITLE" description="COM_QLUE404_CUSTOM_DESC" size="40" maxlength="255" class="inputbox" required="true" />
+		<field name="published"	type="list"	label="JSTATUS"	description="JFIELD_PUBLISHED_DESC"	class="inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+		<field name="created" type="text" class="readonly" label="COM_QLUE404_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_ID_DESC" size="40" default="0" readonly="true" />
+		<field name="modified" type="text" class="readonly" label="COM_QLUE404_FIELD_MODIFIED_LABEL" description="JGLOBAL_FIELD_ID_DESC" size="40" default="0" readonly="true" />
+		<field name="description" type="editor"	label="JGLOBAL_DESCRIPTION"	description="COM_QLUE404_DESCRIPTION_DESC" class="inputbox"	filter="safehtml" buttons="true" required="true" hide="readmore,pagebreak" />
+	</fieldset>
+	
+	<fields name="params">
+		<fieldset name="params">
+			<field name="page_suffix" type="text" class="inputbox" label="COM_QLUE404_SUFFIX_LABEL" description="COM_QLUE404_SUFFIX_DESC" size="25" />
+			<field name="show_title" type="list" label="JGLOBAL_SHOW_TITLE_LABEL" description="COM_QLUE404_TITLE_DESC" class="inputbox" size="1" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+		</fieldset>
+	</fields>
+	
+	<fieldset name="hidden">
+		<field name="error" type="hidden" default="403,404,500" />
+	</fieldset>
+</form>

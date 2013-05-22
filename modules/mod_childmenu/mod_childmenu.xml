@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_childmenu</name>
+	<author>Woondroo</author>
+	<creationDate>Janu 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>用于显示分类作为子导航的模块</description>
+	<files>
+		<filename module="mod_childmenu">mod_childmenu.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_childmenu.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_childmenu.ini</language>
+		<language tag="en-GB">en-GB.mod_childmenu.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CHILDMENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="childtitle"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_CHILDTITLE_LABEL"
+					description="MOD_CHILDMENU_FIELD_CHILDTITLE_DESC"
+					size="50"/>
+				
+				<field name="autofill" type="autofill"
+					default="cm-ln"
+					label="MOD_CHILDMENU_FIELD_AUTOFILL_LABEL"
+					description="MOD_CHILDMENU_FIELD_AUTOFILL_DESC"
+					required="true">
+					
+					<option id="1" src="templates/system/images/autofill/leftmenu_level1.png" value="cm-ln" params="{menutype:'others',showAllChildren:0}" title="左侧菜单+无子菜单"></option>
+					<option id="2" src="templates/system/images/autofill/leftmenu_level2.png" value="cm-lc" params="{menutype:'others',showAllChildren:1}" title="左侧菜单+子菜单"></option>
+				</field>
+				
+				<field
+					name="showAllChildren"
+					type="radio"
+					default="1"
+					label="MOD_CHILDMENU_FIELD_ALLCHILDREN_LABEL"
+					description="MOD_CHILDMENU_FIELD_ALLCHILDREN_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				<field
+					name="showchildmenupre"
+					type="radio"
+					default="0"
+					label="MOD_CHILDMENU_FIELD_SHOWCHILDMENUPRE_LABEL"
+					description="MOD_CHILDMENU_FIELD_SHOWCHILDMENUPRE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="childmenupre"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_CHILDMENUPRE_LABEL"
+					description="MOD_CHILDMENU_FIELD_CHILDMENUPRE_LABEL"
+					filter="string"
+					size="50" />
+				<field
+					name="showchild2menupre"
+					type="radio"
+					default="0"
+					label="MOD_CHILDMENU_FIELD_SHOWCHILD2MENUPRE_LABEL"
+					description="MOD_CHILDMENU_FIELD_SHOWCHILD2MENUPRE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="child2menupre"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_CHILD2MENUPRE_LABEL"
+					description="MOD_CHILDMENU_FIELD_CHILD2MENUPRE_LABEL"
+					filter="string"
+					size="50" />
+				<field
+					name="showchildtoptitle"
+					type="radio"
+					default="0"
+					label="MOD_CHILDMENU_FIELD_SHOWCHILDTOPTITLE_LABEL"
+					description="MOD_CHILDMENU_FIELD_SHOWCHILDTOPTITLE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="toptitlebg"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_TOPTITLEBG_LABEL"
+					description="MOD_CHILDMENU_FIELD_TOPTITLEBG_LABEL"
+					filter="string"
+					size="10" />
+				<field
+					name="toptitleprebg"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_TOPTITLEPREBG_LABEL"
+					description="MOD_CHILDMENU_FIELD_CHILDMENUPREBG_LABEL"
+					filter="string"
+					size="10" />
+				<!--
+				<field
+					name="childmenubg"
+					type="text"
+					label="MOD_MENU_FIELD_CHILDMENUBG_LABEL"
+					description="MOD_MENU_FIELD_CHILDMENUBG_LABEL"
+					filter="string"
+					size="10" />
+				-->
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_TAG_ID_LABEL"
+					description="MOD_CHILDMENU_FIELD_TAG_ID_DESC" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_CLASS_LABEL"
+					description="MOD_CHILDMENU_FIELD_CLASS_DESC" />
+
+				<field
+					name="window_open"
+					type="text"
+					label="MOD_CHILDMENU_FIELD_TARGET_LABEL"
+					description="MOD_CHILDMENU_FIELD_TARGET_DESC" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

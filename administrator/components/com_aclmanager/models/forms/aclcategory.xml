@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_aclmanager/models/rules"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="title"
+			type="text"
+			label="目录标题"
+			description="输入目录标题"
+			size="40"
+			class="inputbox"
+			
+			required="true"
+			default=""
+		/>
+		<field
+			name="ordering"
+			type="text"
+			label="排序"
+			description="输入排序"
+			size="40"
+			class="inputbox"
+			default="0"
+			required="true"
+		/>
+	</fieldset>
+</form>

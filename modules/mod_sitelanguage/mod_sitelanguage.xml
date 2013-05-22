@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_sitelanguage</name>
+	<author>Woondroo</author>
+	<creationDate>Janu 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>语言栏模块</description>
+	<files>
+		<filename module="mod_sitelanguage">mod_sitelanguage.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_sitelanguage.xml</filename>
+	</files>
+	<languages>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_SITELANGUAGE" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="showbg"
+					type="radio"
+					default="1"
+					label="是否显示背景图"
+					description="是否显示语言元素的背景图">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="usebg"
+					type="radio"
+					default="0"
+					label="完全使用背景图"
+					description="是否完全使用背景图">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="languagebg"
+					type="text"
+					label="语言栏背景图"
+					description="请上传语言栏背景图"
+					default=""
+					size="10"
+				/>
+				<field
+					name="isselect"
+					type="radio"
+					default="0"
+					label="是否下拉显示"
+					description="是否用下拉的形式显示语言切换">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showtext"
+					type="radio"
+					default="1"
+					label="是否显示文字"
+					description="是否显示语言文字">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="width"
+					type="text"
+					default="45px"
+					label="单个语言栏区域宽度"
+					description="语言栏显示区域的宽度，可设置百分比">
+				</field>
+				<field
+					name="height"
+					type="text"
+					default="20px"
+					label="语言栏区域高度"
+					description="语言栏显示区域的高度，可设置百分比">
+				</field>
+				<field
+					name="left"
+					type="text"
+					default=""
+					label="语言栏左偏移"
+					description="Logo距离左边边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="right"
+					type="text"
+					default=""
+					label="语言栏右偏移(优先)"
+					description="Logo距离右边边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="top"
+					type="text"
+					default=""
+					label="语言栏顶部偏移"
+					description="Logo距离顶部边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="bottom"
+					type="text"
+					default=""
+					label="语言栏底部偏移(优先)"
+					description="Logo距离底部边界的距离是多少，可设置百分比">
+				</field>
+				<field
+					name="languagetext"
+					type="text"
+					default="简体|EN"
+					label="语言种类(多个用|隔开)"
+					description="填写需要展示的语言种类，多个用|隔开即可">
+				</field>
+				<field
+					name="languagesrc"
+					type="text"
+					default="cn|en"
+					label="语言路径(需对应种类)"
+					description="填写需要语言路径，需要一一对应语言种类，多个用|隔开即可">
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

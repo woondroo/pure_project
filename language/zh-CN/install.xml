@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install version="1.7" client="site" type="language" method="upgrade">
+ <tag>zh-CN</tag>
+	<name>简体中文</name>
+    <description>Joomla 1.7.0 前台简体中文（Simplified Chinese）语言文件</description>
+	<version>1.7.0</version>
+	<creationDate>2011-07-20</creationDate>
+	<author>Joomla之门</author>
+	<authorEmail>joomlagate@gmail.com</authorEmail>
+	<authorUrl>http://www.joomlagate.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters &amp; Joomla.fr. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<description>
+    <![CDATA[
+		<div align="center">
+			YeYo于2011年7月20日更新，网站：<a href="http://www.nzye.com/" target="_blank">典藏阁</a>，发布网站：<a href="http://www.joomlagate.com/" target="_blank">Joomla之门</a>。
+ 		</div>
+  ]]>
+	</description>
+	<files>
+        <filename>index.html</filename>
+		<filename>zh-CN.com_contact.ini</filename>
+		<filename>zh-CN.com_content.ini</filename>
+		<filename>zh-CN.com_mailto.ini</filename>
+		<filename>zh-CN.com_media.ini</filename>
+		<filename>zh-CN.com_messages.ini</filename>
+		<filename>zh-CN.com_newsfeeds.ini</filename>
+		<filename>zh-CN.com_search.ini</filename>
+		<filename>zh-CN.com_users.ini</filename>
+		<filename>zh-CN.com_weblinks.ini</filename>
+		<filename>zh-CN.com_wrapper.ini</filename>
+		<filename>zh-CN.files_joomla.sys.ini</filename>
+		<filename>zh-CN.ini</filename>
+		<filename>zh-CN.lib_joomla.ini</filename>
+		<filename>zh-CN.localise.php</filename>
+		<filename>zh-CN.mod_articles_archive.ini</filename>
+		<filename>zh-CN.mod_articles_archive.sys.ini</filename>
+		<filename>zh-CN.mod_articles_categories.ini</filename>
+		<filename>zh-CN.mod_articles_categories.sys.ini</filename>
+		<filename>zh-CN.mod_articles_category.ini</filename>
+		<filename>zh-CN.mod_articles_category.sys.ini</filename>
+		<filename>zh-CN.mod_articles_latest.ini</filename>
+		<filename>zh-CN.mod_articles_latest.sys.ini</filename>
+		<filename>zh-CN.mod_articles_news.ini</filename>
+		<filename>zh-CN.mod_articles_news.sys.ini</filename>
+		<filename>zh-CN.mod_articles_popular.ini</filename>
+		<filename>zh-CN.mod_articles_popular.sys.ini</filename>
+		<filename>zh-CN.mod_banners.ini</filename>
+		<filename>zh-CN.mod_banners.sys.ini</filename>
+		<filename>zh-CN.mod_breadcrumbs.ini</filename>
+		<filename>zh-CN.mod_breadcrumbs.sys.ini</filename>
+		<filename>zh-CN.mod_custom.ini</filename>
+		<filename>zh-CN.mod_custom.sys.ini</filename>
+		<filename>zh-CN.mod_feed.ini</filename>
+		<filename>zh-CN.mod_feed.sys.ini</filename>
+		<filename>zh-CN.mod_footer.ini</filename>
+		<filename>zh-CN.mod_footer.sys.ini</filename>
+		<filename>zh-CN.mod_languages.ini</filename>
+		<filename>zh-CN.mod_languages.sys.ini</filename>
+		<filename>zh-CN.mod_login.ini</filename>
+		<filename>zh-CN.mod_login.sys.ini</filename>
+		<filename>zh-CN.mod_menu.ini</filename>
+		<filename>zh-CN.mod_menu.sys.ini</filename>
+		<filename>zh-CN.mod_random_image.ini</filename>
+		<filename>zh-CN.mod_random_image.sys.ini</filename>
+		<filename>zh-CN.mod_related_items.ini</filename>
+		<filename>zh-CN.mod_related_items.sys.ini</filename>
+		<filename>zh-CN.mod_search.ini</filename>
+		<filename>zh-CN.mod_search.sys.ini</filename>
+		<filename>zh-CN.mod_stats.ini</filename>
+		<filename>zh-CN.mod_stats.sys.ini</filename>
+		<filename>zh-CN.mod_syndicate.ini</filename>
+		<filename>zh-CN.mod_syndicate.sys.ini</filename>
+		<filename>zh-CN.mod_users_latest.ini</filename>
+		<filename>zh-CN.mod_users_latest.sys.ini</filename>
+		<filename>zh-CN.mod_weblinks.ini</filename>
+		<filename>zh-CN.mod_weblinks.sys.ini</filename>
+		<filename>zh-CN.mod_whosonline.ini</filename>
+		<filename>zh-CN.mod_whosonline.sys.ini</filename>
+		<filename>zh-CN.mod_wrapper.ini</filename>
+		<filename>zh-CN.mod_wrapper.sys.ini</filename>
+		<filename>zh-CN.tpl_atomic.ini</filename>
+		<filename>zh-CN.tpl_atomic.sys.ini</filename>
+		<filename>zh-CN.tpl_beez_20.ini</filename>
+		<filename>zh-CN.tpl_beez_20.sys.ini</filename>
+		<filename>zh-CN.tpl_beez5.ini</filename>
+		<filename>zh-CN.tpl_beez5.sys.ini</filename>
+		<filename file="meta">install.xml</filename>
+		<filename file="meta">zh-CN.xml</filename>
+	</files>
+	<params />
+</install>

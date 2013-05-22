@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_menu</name>
+	<author>Joomla! Project</author>
+	<creationDate>July 2004</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.7.0</version>
+	<description>MOD_MENU_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_menu">mod_menu.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_menu.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_menu.ini</language>
+		<language tag="en-GB">en-GB.mod_menu.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="childtitle"
+					type="text"
+					label="MOD_MENU_FIELD_CHILDTITLE_LABEL"
+					description="MOD_MENU_FIELD_CHILDTITLE_DESC"
+					size="50"/>
+				
+				<field name="autofill" type="autofill"
+					default="cm-ln"
+					label="MOD_MENU_FIELD_AUTOFILL_LABEL"
+					description="MOD_MENU_FIELD_AUTOFILL_DESC"
+					required="true">
+					
+					<option id="1" src="templates/system/images/autofill/leftmenu_level1.png" value="cm-ln" params="{menutype:'others',showAllChildren:0}" title="左侧菜单+无子菜单"></option>
+					<option id="2" src="templates/system/images/autofill/leftmenu_level2.png" value="cm-lc" params="{menutype:'others',showAllChildren:1}" title="左侧菜单+子菜单"></option>
+					<option id="3" src="templates/system/images/autofill/navigation_list_nochild.png" value="mm-none" params="{menutype:'mainmenu',showAllChildren:0}" title="主导航横向+无子菜单"></option>
+					<option id="4" src="templates/system/images/autofill/navigation_list_transverse.png" value="mm-l" params="{menutype:'mainmenu',showAllChildren:1,mainmenualign:1}" title="主导航横向+子菜单横向"></option>
+					<option id="5" src="templates/system/images/autofill/navigation_list_longitudinal.png" value="mm-v" params="{menutype:'mainmenu',showAllChildren:1,mainmenualign:2}" title="主导航横向+子菜单纵向"></option>
+				</field>
+				
+				<field
+					name="menutype"
+					type="menu"
+					label="MOD_MENU_FIELD_MENUTYPE_LABEL"
+					description="MOD_MENU_FIELD_MENUTYPE_DESC" />
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="MOD_MENU_FIELD_STARTLEVEL_LABEL"
+					description="MOD_MENU_FIELD_STARTLEVEL_DESC"
+				>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="MOD_MENU_FIELD_ENDLEVEL_LABEL"
+					description="MOD_MENU_FIELD_ENDLEVEL_DESC"
+					>
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_ALLCHILDREN_LABEL"
+					description="MOD_MENU_FIELD_ALLCHILDREN_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="showchildmenupre"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_SHOWCHILDMENUPRE_LABEL"
+					description="MOD_MENU_FIELD_SHOWCHILDMENUPRE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="childmenupre"
+					type="text"
+					label="MOD_MENU_FIELD_CHILDMENUPRE_LABEL"
+					description="MOD_MENU_FIELD_CHILDMENUPRE_LABEL"
+					filter="string"
+					size="50" />
+				<field
+					name="showchild2menupre"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_SHOWCHILD2MENUPRE_LABEL"
+					description="MOD_MENU_FIELD_SHOWCHILD2MENUPRE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="child2menupre"
+					type="text"
+					label="MOD_MENU_FIELD_CHILD2MENUPRE_LABEL"
+					description="MOD_MENU_FIELD_CHILD2MENUPRE_LABEL"
+					filter="string"
+					size="50" />
+				<field
+					name="showchildtoptitle"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_SHOWCHILDTOPTITLE_LABEL"
+					description="MOD_MENU_FIELD_SHOWCHILDTOPTITLE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="toptitlebg"
+					type="text"
+					label="MOD_MENU_FIELD_TOPTITLEBG_LABEL"
+					description="MOD_MENU_FIELD_TOPTITLEBG_LABEL"
+					filter="string"
+					size="10" />
+				<field
+					name="toptitleprebg"
+					type="text"
+					label="MOD_MENU_FIELD_TOPTITLEPREBG_LABEL"
+					description="MOD_MENU_FIELD_CHILDMENUPREBG_LABEL"
+					filter="string"
+					size="10" />
+				<!--
+				<field
+					name="childmenubg"
+					type="text"
+					label="MOD_MENU_FIELD_CHILDMENUBG_LABEL"
+					description="MOD_MENU_FIELD_CHILDMENUBG_LABEL"
+					filter="string"
+					size="10" />
+				-->
+				
+				<field
+					name="hidehomemenu"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_HIDEHOMEMENU_LABEL"
+					description="MOD_MENU_FIELD_HIDEHOMEMENU_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				
+				<field
+					name="showmenutitle"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_SHOWMENUTITLE_LABEL"
+					description="MOD_MENU_FIELD_SHOWMENUTITLE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="showmenuchildtitle"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_SHOWMENUCHILDTITLE_LABEL"
+					description="MOD_MENU_FIELD_SHOWMENUCHILDTITLE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="showmenupre"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_SHOWMENUPRE_LABEL"
+					description="MOD_MENU_FIELD_SHOWMENUPRE_DESC"
+					filter="integer">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				<field
+					name="menupre"
+					type="text"
+					label="MOD_MENU_FIELD_MENUPRE_LABEL"
+					description="MOD_MENU_FIELD_MENUPRE_LABEL"
+					filter="string"
+					size="50" />
+				
+				<field
+					name="mainmenu_css_type"
+					type="text"
+					default="main-menu"
+					label="MOD_MENU_FIELD_MAINMENU_CSS_TYPE_LABEL"
+					description="MOD_MENU_FIELD_MAINMENU_CSS_TYPE_DESC">
+				</field>
+				
+				<field
+					name="mainmenupos"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_MAINMENUPOS_LABEL"
+					description="MOD_MENU_FIELD_MAINMENUPOS_DESC">
+					<option
+						value="1">JL</option>
+					<option
+						value="2">JC</option>
+					<option
+						value="3">JR</option>
+				</field>
+				
+				<field
+					name="mainmenualign"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_MAINMENUALIGN_LABEL"
+					description="MOD_MENU_FIELD_MAINMENUALIGN_DESC">
+					<option
+						value="1">JLINE</option>
+					<option
+						value="2">JVERTICAL</option>
+				</field>
+				
+				<field
+					name="mainmenuopen"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_MAINMENUOPEN_LABEL"
+					description="MOD_MENU_FIELD_MAINMENUOPEN_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mainmenuhide"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_MAINMENUHIDE_LABEL"
+					description="MOD_MENU_FIELD_MAINMENUHIDE_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mainmenufade"
+					type="radio"
+					default="1"
+					label="MOD_MENU_FIELD_MAINMENUFADE_LABEL"
+					description="MOD_MENU_FIELD_MAINMENUFADE_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mainmenuoffset"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_MAINMENUOFFSET_LABEL"
+					description="MOD_MENU_FIELD_MAINMENUOFFSET_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JL</option>
+					<option
+						value="2">JR</option>
+					<option
+						value="3">JT</option>
+					<option
+						value="4">JB</option>
+				</field>
+				
+				<field
+					name="manimtime"
+					type="text"
+					default="300"
+					label="MOD_MENU_FIELD_MANIMTIME_LABEL"
+					description="MOD_MENU_FIELD_MANIMTIME_DESC">
+				</field>
+				
+				<field
+					name="mbg"
+					type="text"
+					default=""
+					size="10"
+					label="MOD_MENU_FIELD_MBG_LABEL"
+					description="MOD_MENU_FIELD_MBG_DESC">
+				</field>
+				
+				<field
+					name="musebg"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_MUSEBG_LABEL"
+					description="MOD_MENU_FIELD_MUSEBG_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mmargin"
+					type="text"
+					default="20px"
+					label="MOD_MENU_FIELD_MMARGIN_LABEL"
+					description="MOD_MENU_FIELD_MMARGIN_DESC">
+				</field>
+				
+				<field
+					name="mwidth"
+					type="text"
+					default="100px"
+					label="MOD_MENU_FIELD_MWIDTH_LABEL"
+					description="MOD_MENU_FIELD_MWIDTH_DESC">
+				</field>
+				
+				<field
+					name="mheight"
+					type="text"
+					default="30px"
+					label="MOD_MENU_FIELD_MHEIGHT_LABEL"
+					description="MOD_MENU_FIELD_MHEIGHT_DESC">
+				</field>
+				
+				<field
+					name="mctopbg"
+					type="text"
+					default=""
+					size="10"
+					label="MOD_MENU_FIELD_MCTOPBG_LABEL"
+					description="MOD_MENU_FIELD_MCTOPBG_DESC">
+				</field>
+				
+				<field
+					name="mctopheight"
+					type="text"
+					default="0px"
+					label="MOD_MENU_FIELD_MCTOPHEIGHT_LABEL"
+					description="MOD_MENU_FIELD_MCTOPHEIGHT_DESC">
+				</field>
+				
+				<field
+					name="mctopm"
+					type="text"
+					default="0px"
+					label="MOD_MENU_FIELD_MCTOPM_LABEL"
+					description="MOD_MENU_FIELD_MCTOPM_DESC">
+				</field>
+				
+				<field
+					name="mcbg"
+					type="text"
+					default=""
+					size="10"
+					label="MOD_MENU_FIELD_MCBG_LABEL"
+					description="MOD_MENU_FIELD_MCBG_DESC">
+				</field>
+				
+				<field
+					name="mcusebg"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_MCUSEBG_LABEL"
+					description="MOD_MENU_FIELD_MCUSEBG_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mcmargin"
+					type="text"
+					default="20px"
+					label="MOD_MENU_FIELD_MCMARGIN_LABEL"
+					description="MOD_MENU_FIELD_MCMARGIN_DESC">
+				</field>
+				
+				<field
+					name="mcwidth"
+					type="text"
+					default="100px"
+					label="MOD_MENU_FIELD_MCWIDTH_LABEL"
+					description="MOD_MENU_FIELD_MCWIDTH_DESC">
+				</field>
+				
+				<field
+					name="mcheight"
+					type="text"
+					default="30px"
+					label="MOD_MENU_FIELD_MCHEIGHT_LABEL"
+					description="MOD_MENU_FIELD_MCHEIGHT_DESC">
+				</field>
+				
+				<field
+					name="mcbreak"
+					type="radio"
+					default="0"
+					label="MOD_MENU_FIELD_MCBREAK_LABEL"
+					description="MOD_MENU_FIELD_MCBREAK_DESC">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mcbreakwidth"
+					type="text"
+					default="2px"
+					label="MOD_MENU_FIELD_MCBREAKWIDTH_LABEL"
+					description="MOD_MENU_FIELD_MCBREAKWIDTH_DESC">
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="MOD_MENU_FIELD_TAG_ID_LABEL"
+					description="MOD_MENU_FIELD_TAG_ID_DESC" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="MOD_MENU_FIELD_CLASS_LABEL"
+					description="MOD_MENU_FIELD_CLASS_DESC" />
+
+				<field
+					name="window_open"
+					type="text"
+					label="MOD_MENU_FIELD_TARGET_LABEL"
+					description="MOD_MENU_FIELD_TARGET_DESC" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+ 
+	<name>权限管理组件</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>2011-10</creationDate>
+	<author>omese</author>
+	<authorEmail>omese@qq.com</authorEmail>
+	<authorUrl>http://www.d-niu.com</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.0.1</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>权限管理组件是用于管理左侧功能目录的组件</description>
+ 
+	<!-- Runs on install/uninstall/update; New in 1.6 -->
+	<scriptfile>script.php</scriptfile>
+ 
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<media destination="com_aclmanager" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+ 
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="../media/com_aclmanager/images/tux-16x16.png">权限管理组件</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>aclmanager.php</filename>
+			<filename>controller.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
+			<!-- helpers files section -->
+			<folder>helpers</folder>
+		</files>
+	</administration> 
+</extension>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_toback</name>
+	<author>Woondroo</author>
+	<creationDate>Janu 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>返回按钮</description>
+	<files>
+		<filename module="mod_toback">mod_toback.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_toback.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_toback.ini</language>
+		<language tag="en-GB">en-GB.mod_toback.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_TOBACK" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="ishover"
+					type="radio"
+					default="0"
+					label="按钮是否有经过效果"
+					description="设置按钮是否有经过效果">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="showlist"
+					type="radio"
+					default="1"
+					label="是否显示返回列表按钮"
+					description="是否在页面上显示返回列表按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="listshowtext"
+					type="radio"
+					default="0"
+					label="是否显示返回列表文字"
+					description="是否在页面上显示返回列表的文字">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="listway"
+					type="radio"
+					default="0"
+					label="按钮位置"
+					description="设置按钮位置">
+					<option value="0">返回顶部在前</option>
+					<option value="1">返回列表在前</option>
+				</field>
+				<field
+					name="listtext"
+					type="text"
+					default="返回列表"
+					size="40"
+					label="返回列表文字"
+					description="填写显示在页面上的返回列表文字">
+				</field>
+				<field
+					name="listbgimg"
+					type="text"
+					default=""
+					label="返回列表按钮背景图"
+					description="设置返回列表按钮背景图"
+					size="10">
+				</field>
+				<field
+					name="listwidth"
+					type="text"
+					default="20px"
+					label="返回列表按钮宽度"
+					description="设置返回列表按钮宽度">
+				</field>
+				<field
+					name="listheight"
+					type="text"
+					default="100px"
+					label="返回列表按钮高度"
+					description="设置返回列表按钮高度">
+				</field>
+				<field
+					name="listmb"
+					type="text"
+					default="140px"
+					label="返回列表按钮偏移"
+					description="设置返回列表按钮距离底部(竖排)/右侧(横排)的偏移">
+				</field>
+				<field
+					name="listpos"
+					type="radio"
+					default="1"
+					label="返回列表按钮定位"
+					description="定位返回列表按钮，“相对/绝对/浮动”">
+					<option value="1">相对内容于底部横排</option>
+					<option value="2">绝对内容于右侧竖排</option>
+					<option value="3">浮动于内容右侧竖排</option>
+					<option value="4">浮动于窗口右侧竖排</option>
+				</field>
+				
+				<field
+					name="showtop"
+					type="radio"
+					default="1"
+					label="是否显示返回顶部按钮"
+					description="是否在页面上显示返回顶部按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="topshowtext"
+					type="radio"
+					default="0"
+					label="是否显示返回顶部文字"
+					description="是否在页面上显示返回顶部的文字">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="toptext"
+					type="text"
+					default="返回顶部"
+					size="40"
+					label="返回顶部文字"
+					description="填写显示在页面上的返回顶部文字">
+				</field>
+				<field
+					name="topbgimg"
+					type="text"
+					default=""
+					label="返回顶部按钮背景图"
+					description="设置返回顶部按钮背景图"
+					size="10">
+				</field>
+				<field
+					name="topwidth"
+					type="text"
+					default="20px"
+					label="返回顶部按钮宽度"
+					description="设置返回顶部按钮宽度">
+				</field>
+				<field
+					name="topheight"
+					type="text"
+					default="100px"
+					label="返回顶部按钮高度"
+					description="设置返回顶部按钮高度">
+				</field>
+				<field
+					name="topishide"
+					type="radio"
+					default="1"
+					label="返回顶部按钮在是否自动隐藏"
+					description="但滚动条滚动到最顶部的时候,是否隐藏“返回顶部”按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="topmb"
+					type="text"
+					default="20px"
+					label="返回顶部按钮偏移"
+					description="设置返回顶部按钮距离底部(竖排)/右侧(横排)的偏移">
+				</field>
+				<field
+					name="toppos"
+					type="radio"
+					default="1"
+					label="返回顶部按钮定位"
+					description="定位返回顶部按钮，“相对/绝对/浮动”">
+					<option value="1">相对内容于底部横排</option>
+					<option value="2">绝对内容于右侧竖排</option>
+					<option value="3">浮动于内容右侧竖排</option>
+					<option value="4">浮动于窗口右侧竖排</option>
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

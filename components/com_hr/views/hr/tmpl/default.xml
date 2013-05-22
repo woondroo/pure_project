@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_HR_HR_VIEW_DEFAULT_TITLE" option="com_hr_hrs_view_default_option">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_HR_HRS"
+		/>
+		<message>
+			<![CDATA[COM_HR_HR_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+</metadata>

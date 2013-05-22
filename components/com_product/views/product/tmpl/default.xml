@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_PRODUCT_PRODUCT_VIEW_DEFAULT_TITLE" option="COM_PRODUCT_PRODUCTS_VIEW_DEFAULT_OPTION">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_PRODUCT_PRODUCTS"
+		/>
+		<message>
+			<![CDATA[COM_PRODUCT_PRODUCT_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+</metadata>

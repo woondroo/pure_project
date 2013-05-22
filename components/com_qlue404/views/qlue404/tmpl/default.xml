@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_QLUE404_QLUE404_VIEW_DEFAULT_TITLE" option="COM_QLUE404_QLUE404S_VIEW_DEFAULT_OPTION">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_QLUE404_QLUE404S"
+		/>
+		<message>
+			<![CDATA[COM_QLUE404_QLUE404_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+</metadata>

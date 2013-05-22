@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.6" type="plugin" group="content" method="upgrade">
+<name>Content - Sitelinkx</name>
+<creationDate>11/2011</creationDate>
+<author>www.eXtro-media.de</author>
+<authorEmail>sitelinkx@eXtro-media.de</authorEmail>
+<authorUrl>http://www.eXtro-media.de</authorUrl>
+<copyright>(c) 2009-2011 all rights reserved</copyright>
+<license>GNU/GPL</license>
+<version>1.54</version>
+<description>Sitelinkx plugin V1.54</description>
+<files>
+   <filename plugin="sitelinkx">sitelinkx.php</filename> 
+</files>
+<params/>
+</install>

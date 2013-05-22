@@ -1,0 +1,103 @@
+/**
+ * @version		$Id: offline.css 21331 2011-05-11 04:28:32Z eddieajau $
+ * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+body {
+	margin: 0; padding: 0;
+	font: 12px/18px "微软雅黑", Arial, Helvetica, Sans Serif; font-size: 78%;
+	color: #333333;
+	text-align: center;
+}
+
+img  {
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame {
+	margin: 20px auto;
+	width: 400px;
+	padding: 20px;
+}
+
+#frame form {
+	text-align: left;
+}
+
+/* -- class styles ---------------------------------- */
+
+.outline {
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  padding: 2px;
+}
+
+/* -- form styles ----------------------------------- */
+
+form    { margin: auto; }
+form p  { margin: 0; padding: 0; }
+form fieldset { border: 0 none; margin: 0em; padding: 0.2em;}
+label         { display: block; float: left; }
+input 		  { padding: 1px; }
+input.button  { width: 44px; text-align:center; height: 25px; line-height:25px; cursor: pointer; }
+
+label   { margin: 5px 10px 2px 0px; width: 10em; text-align: right;}
+form p  { padding: 0.2em 0 0.2em 0; }
+form br  { display: none; }
+input    { border: 1px solid #0E67A1; }
+input.button 		 { background-color: white; }
+input.button:hover { border-color:  #FC902E; background-color: #F0F0F0;  }
+
+
+
+#frmlogin	      { margin: 0 10px 0 10px;  }
+#frmlogin fieldset.button { text-align: right; }
+
+/* -- check code styles ------------------------------ */
+
+#checkcode{
+	width:40px;
+	margin-right:10px;
+}
+.check_code{
+	cursor:pointer;
+}
+#form-login-checkcode label,
+#form-login-checkcode input,
+#form-login-checkcode img{
+	float:left;
+}
+#system-message{
+	display:block;
+	padding:20px 0;
+	margin:0;
+	width:100%;
+	background:#F0F0F0;
+}
+#system-message ul,
+#system-message li{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#system-message dd,
+#system-message dt{
+	margin:0;
+}
+#system-message dt{
+	height:30px;
+	line-height:30px;
+	color:#999;
+	font-weight:600;
+	font-size:15px;
+}
+#system-message dd ul li{
+	height:30px;
+	line-height:30px;
+	color:#333;
+}

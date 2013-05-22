@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_homecontact</name>
+	<author>Woondroo</author>
+	<creationDate>Nov 2011</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>首页联系方式</description>
+	<files>
+		<filename module="mod_homecontact">mod_homecontact.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_homecontact.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_homecontact.ini</language>
+		<language tag="en-GB">en-GB.mod_homecontact.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_BANNERINDEX" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="home_contact_alias"
+					type="text"
+					default="top"
+					label="联系模块别名"
+					description="设置联系模块别名，防止CSS、JS冲突">
+				</field>
+				<field
+					name="home_contact_bg"
+					type="media"
+					default=""
+					label="联系模块背景"
+					description="上传首页联系方式背景">
+				</field>
+				<field
+					name="home_contact_tel"
+					type="text"
+					default=""
+					label="联系电话"
+					description="设置联系电话">
+				</field>
+				<field
+					name="home_contact_add"
+					type="text"
+					default=""
+					label="联系地址"
+					description="设置联系地址">
+				</field>
+				<field
+					name="home_contact_qq"
+					type="text"
+					default=""
+					label="联系QQ"
+					description="设置联系QQ">
+				</field>
+				<field
+					name="home_contact_width"
+					type="text"
+					default="960px"
+					label="宽度"
+					description="联系模块宽度">
+				</field>
+				<field
+					name="home_contact_height"
+					type="text"
+					default="200px"
+					label="高度"
+					description="联系模块高度">
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

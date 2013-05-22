@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.6.0" method="upgrade">
+<name>Sitelinkx</name>
+<creationDate>11/2011</creationDate>
+<author>www.eXtro-media.de</author>
+<authorEmail>sitelinkx@eXtro-media.de</authorEmail>
+<authorUrl>http://www.eXtro-media.de</authorUrl>
+<copyright>(c) 2009-2011 all rights reserved</copyright>
+<license>GNU/GPL</license>
+<!--  The version string is recorded in the components table -->
+<version>1.54</version>
+<!-- The description is optional and defaults to the name -->
+<description>Sitelinkx Component V1.54</description>
+
+<scriptfile>script.php</scriptfile>
+
+<install>
+<sql>
+<file charset="utf8" driver="mysql">install.sql</file>
+</sql>
+</install>
+<uninstall>
+
+</uninstall>
+
+<!--	<installfile>install.sitelinkx.php</installfile>
+  
+	<uninstallfile>uninstall.sitelinkx.php</uninstallfile>
+-->
+
+<administration>
+
+
+		<menu img="components/com_sitelinkx/images/xem16.png" link="option=com_sitelinkx">Sitelinkx</menu>
+			<submenu>
+		    <menu img="components/com_sitelinkx/images/xem16.png" link="option=com_sitelinkx">Sitelinkx Manager</menu>
+			  <menu img="components/com_sitelinkx/images/xem16.png" link="option=com_sitelinkx&amp;controller=sitelinkxconfig">Sitelinkx Config</menu>        			
+			  <menu img="components/com_sitelinkx/images/xem16.png" link="option=com_sitelinkx&amp;controller=slabout">About Sitelinkx</menu>				
+			</submenu>
+
+
+<!-- Administration Main File Copy Section -->
+<files folder="admin">
+<!-- Site Main File Copy Section -->
+<filename>index.html</filename>
+<filename>sitelinkx.php</filename>
+<filename>controller.php</filename>
+<filename>access.xml</filename>
+<filename>config.xml</filename>
+<filename>install.sql</filename>
+<!--
+<filename>install.sitelinkx.php</filename>
+<filename>uninstall.sitelinkx.php</filename>
+-->
+<filename>sitelinkx.css</filename>
+
+<filename>controllers/index.html</filename>
+<filename>controllers/sitelinkx.php</filename>
+<filename>controllers/sitelinkxconfig.php</filename>
+<filename>controllers/sitelinkxlist.php</filename>
+
+<filename>images/index.html</filename>
+<filename>images/ampel-gelb.png</filename>
+<filename>images/ampel-gruen.png</filename>
+<filename>images/ampel-rot.png</filename>
+<filename>images/b_gr.gif</filename>
+<filename>images/b_ye.gif</filename>
+<filename>images/bulb.gif</filename>
+<filename>images/xem16.png</filename>
+<filename>images/xem48.png</filename>
+
+<filename>models/index.html</filename>
+<filename>models/sitelinkx.php</filename>
+<filename>models/sitelinkxconfig.php</filename>
+<filename>models/sitelinkxlist.php</filename>
+
+<filename>plugin/sitelinkx.php</filename>
+<filename>plugin/sitelinkx.xml</filename>
+
+<filename>tables/index.html</filename>
+<filename>tables/sitelinkx.php</filename>
+<filename>tables/sitelinkxconfig.php</filename>
+
+<filename>views/index.html</filename>
+<filename>views/sitelinkx/index.html</filename>
+<filename>views/sitelinkx/view.html.php</filename>
+<filename>views/sitelinkx/tmpl/default.php</filename>
+<filename>views/sitelinkx/tmpl/index.html</filename>
+
+<filename>views/sitelinkxconfig/index.html</filename>
+<filename>views/sitelinkxconfig/view.html.php</filename>
+<filename>views/sitelinkxconfig/tmpl/default.php</filename>
+<filename>views/sitelinkxconfig/tmpl/index.html</filename>
+
+<filename>views/sitelinkxlist/index.html</filename>
+<filename>views/sitelinkxlist/view.html.php</filename>
+<filename>views/sitelinkxlist/tmpl/default.php</filename>
+<filename>views/sitelinkxlist/tmpl/index.html</filename>
+
+<filename>views/slabout/index.html</filename>
+<filename>views/slabout/view.html.php</filename>
+<filename>views/slabout/tmpl/default.php</filename>
+<filename>views/slabout/tmpl/index.html</filename>
+
+</files>
+<languages>
+			<language tag="en-GB">languages/en-GB.com_sitelinkx.ini</language>
+			<language tag="de-DE">languages/de-DE.com_sitelinkx.ini</language>
+			<language tag="el-GR">languages/el-GR.com_sitelinkx.ini</language>
+			<language tag="es-ES">languages/es-ES.com_sitelinkx.ini</language>
+			<language tag="fr-FR">languages/fr-FR.com_sitelinkx.ini</language>
+			<language tag="it-IT">languages/it-IT.com_sitelinkx.ini</language>
+			<language tag="ja-JP">languages/ja-JP.com_sitelinkx.ini</language>
+			<language tag="pt-BR">languages/pt-BR.com_sitelinkx.ini</language>
+         <language tag="ru-RU">languages/ru-RU.com_sitelinkx.ini</language>
+			<language tag="tr-TR">languages/tr-TR.com_sitelinkx.ini</language>
+			<language tag="zh-CN">languages/zh-CN.com_sitelinkx.ini</language>
+			<language tag="nl-NL">languages/nl-NL.com_sitelinkx.ini</language>
+			<language tag="pl-PL">languages/pl-PL.com_sitelinkx.ini</language>
+			<language tag="ar-AA">languages/ar-AA.com_sitelinkx.ini</language>
+			<language tag="bg-BG">languages/bg-BG.com_sitelinkx.ini</language>
+			<language tag="hu-HU">languages/hu-HU.com_sitelinkx.ini</language>
+			<language tag="id-ID">languages/id-ID.com_sitelinkx.ini</language>
+			<language tag="ro-RO">languages/ro-RO.com_sitelinkx.ini</language>
+			<language tag="sv-SE">languages/sv-SE.com_sitelinkx.ini</language>
+</languages>
+</administration>
+</install>

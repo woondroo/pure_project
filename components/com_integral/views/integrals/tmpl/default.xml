@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_INTEGRAL_INTEGRALS_VIEW_DEFAULT_TITLE" option="COM_INTEGRAL_INTEGRALS_VIEW_DEFAULT_OPTION">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_INTEGRAL_INTEGRALS"
+		/>
+		<message>
+			<![CDATA[COM_INTEGRAL_INTEGRALS_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+			<field name="id" type="category"
+				default="0"
+				description="COM_INTEGRAL_FIELD_SELECT_CATEGORY_DESC"
+				extension="com_integral"
+				label="COM_INTEGRAL_FIELD_SELECT_CATEGORY_LABEL"
+				required="true"
+			/>
+		</fieldset>
+	</fields>
+	
+	<fields name="params">
+		<fieldset name="basic" label="COM_INTEGRAL_INTEGRAL_MENU_SETTINGS_LABEL">
+			<field name="listway" type="listway"
+				default="3-nf-none"
+				label="COM_INTEGRAL_FIELD_LISTWAY_LABEL"
+				description="COM_INTEGRAL_FIELD_LISTWAY_DESC"
+				required="true">
+				
+				<option id="1" src="templates/system/images/listway/1-f-tt.png" value="1-f-tt" title="标题+时间"></option>
+				<option id="2" src="templates/system/images/listway/1-f-ttd.png" value="1-f-ttd" title="标题+时间+描述"></option>
+				<option id="3" src="templates/system/images/listway/1-f-ittd.png" value="1-f-ittd" title="封面图+标题+时间+描述"></option>
+				<option id="4" src="templates/system/images/listway/3-nf-none.png" value="3-nf-none" title="每行三列无边框"></option>
+				<option id="5" src="templates/system/images/listway/3-nf-title.png" value="3-nf-title" title="每行三列无边框+标题"></option>
+				<option id="6" src="templates/system/images/listway/3-nf-tb.png" value="3-nf-tb" title="每行三列无边框+标题+按钮"></option>
+				<option id="7" src="templates/system/images/listway/3-f-none.png" value="3-f-none" title="每行三列有边框"></option>
+				<option id="8" src="templates/system/images/listway/3-f-title.png" value="3-f-title" title="每行三列有边框+标题"></option>
+				<option id="9" src="templates/system/images/listway/3-f-tb.png" value="3-f-tb" title="每行三列有边框+标题+按钮"></option>
+				<option id="10" src="templates/system/images/listway/4-nf-none.png" value="4-nf-none" title="每行四列无边框"></option>
+				<option id="11" src="templates/system/images/listway/4-nf-title.png" value="4-nf-title" title="每行四列无边框+标题"></option>
+				<option id="12" src="templates/system/images/listway/4-nf-tb.png" value="4-nf-tb" title="每行四列无边框+标题+按钮"></option>
+				<option id="13" src="templates/system/images/listway/4-f-none.png" value="4-f-none" title="每行四列有边框"></option>
+				<option id="14" src="templates/system/images/listway/4-f-title.png" value="4-f-title" title="每行四列有边框+标题"></option>
+				<option id="15" src="templates/system/images/listway/4-f-tb.png" value="4-f-tb" title="每行四列有边框+标题+按钮"></option>
+				<option id="16" src="templates/system/images/listway/3-nf-tdt.png" value="3-nf-tdt" title="图片+标题(生成)+日期+标题"></option>
+			</field>
+			
+			<field name="limit" type="text"
+				default="9"
+				label="COM_INTEGRAL_FIELD_LIMIT_LABEL"
+				description="COM_INTEGRAL_FIELD_LIMIT_DESC"
+				required="true"
+			/>
+			<field name="openway" type="radio"
+				default="1"
+				label="COM_INTEGRAL_FIELD_OPENWAY_LABEL"
+				description="COM_INTEGRAL_FIELD_OPENWAY_DESC"
+				required="true">
+				<option
+					value="1">JCURP</option>
+				<option
+					value="0">JNEWP</option>
+			</field>
+			<field name="imglink" type="radio"
+				default="1"
+				label="COM_INTEGRAL_FIELD_IMGLINK_LABEL"
+				description="COM_INTEGRAL_FIELD_IMGLINK_DESC"
+				required="true">
+				<option
+					value="1">JYES</option>
+				<option
+					value="0">JNO</option>
+			</field>
+			<field name="imgcirclebg" type="media"
+				default=""
+				label="COM_INTEGRAL_FIELD_IMGCIRCLEBG_LABEL"
+				description="COM_INTEGRAL_FIELD_IMGCIRCLEBG_DESC">
+			</field>
+			<field name="titlelink" type="radio"
+				default="1"
+				label="COM_INTEGRAL_FIELD_TITLELINK_LABEL"
+				description="COM_INTEGRAL_FIELD_TITLELINK_DESC"
+				required="true">
+				<option
+					value="1">JYES</option>
+				<option
+					value="0">JNO</option>
+			</field>
+			<field name="titlepre" type="media"
+				default=""
+				label="COM_INTEGRAL_FIELD_TITLEPRE_LABEL"
+				description="COM_INTEGRAL_FIELD_TITLEPRE_DESC">
+			</field>
+			<field name="showbttext" type="radio"
+				default="1"
+				label="COM_INTEGRAL_FIELD_SHOWBTTEXT_LABEL"
+				description="COM_INTEGRAL_FIELD_SHOWBTTEXT_DESC"
+				required="true">
+				<option
+					value="1">JYES</option>
+				<option
+					value="0">JNO</option>
+			</field>
+			<field name="bttext" type="text"
+				default="More"
+				label="COM_INTEGRAL_FIELD_BTTEXT_LABEL"
+				description="COM_INTEGRAL_FIELD_BTTEXT_DESC"
+			/>
+			<field name="moretext" type="text"
+				default="[查看更多]"
+				label="COM_INTEGRAL_FIELD_MORETEXT_LABEL"
+				description="COM_INTEGRAL_FIELD_MORETEXT_DESC" >
+			</field>
+			<field name="isopen" type="radio"
+				default="0"
+				label="COM_INTEGRAL_FIELD_ISOPEN_LABEL"
+				description="COM_INTEGRAL_FIELD_ISOPEN_DESC"
+				required="true">
+				<option
+					value="1">JYES</option>
+				<option
+					value="0">JNO</option>
+			</field>
+			<field name="parentcid" type="text"
+				default="1"
+				label="COM_INTEGRAL_FIELD_PARENTID_LABEL"
+				description="COM_INTEGRAL_FIELD_PARENTID_DESC"
+				required="true"
+			/>
+			<field
+				name="create_title_pre"
+				type="text"
+				default=""
+				label="COM_INTEGRAL_FIELD_CREATE_TITLE_PRE_LABEL"
+				description="COM_INTEGRAL_FIELD_CREATE_TITLE_PRE_DESC">
+			</field>
+			<field
+				name="date_end"
+				type="text"
+				default="日"
+				label="COM_INTEGRAL_FIELD_DATE_END_LABEL"
+				description="COM_INTEGRAL_FIELD_DATE_END_DESC">
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_yingpin/models/rules"
+>
+	<fieldset name="details">
+<field
+			name="id"
+			type="hidden"
+			default=""
+		/>
+		<field
+			name="job"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_JOB_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_JOB_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			
+		/>
+		<field
+			name="name"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_NAME_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_NAME_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			
+		/>
+		<field
+			name="sex"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_SEX_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_SEX_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			
+		/>
+		<field
+			name="tel"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_TEL_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_TEL_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			
+		/>
+		<field
+			name="email"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_EMAIL_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_EMAIL_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			
+		/>
+		<field
+			name="fujian"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_FUJIAN_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_FUJIAN_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			required="true"
+		/>
+		<field
+			name="time"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_TIME_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_TIME_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			required="true"
+		/>
+		<field
+			name="catid"
+			type="category"
+			extension="com_yingpin"
+			class="inputbox"
+			default=""
+			label="COM_YINGPIN_YINGPIN_FIELD_CATID_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_CATID_DESC"
+			required="true"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		<field
+			name="published"
+			type="radio"
+			default="1"
+			label="COM_YINGPIN_YINGPIN_FIELD_PUBLISHED_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_PUBLISHED_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		<field
+			name="ordering"
+			type="text"
+			label="COM_YINGPIN_YINGPIN_FIELD_ORDERING_LABEL"
+			description="COM_YINGPIN_YINGPIN_FIELD_ORDERING_DESC"
+			size="40"
+			class="inputbox"
+			default="0"
+			required="true"
+		/>
+		</fieldset>
+	<fields name="params">
+		<fieldset
+			name="params"
+			label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS"
+		>
+			<field
+				name="show_category"
+				type="list"
+				label="COM_YINGPIN_YINGPIN_FIELD_SHOW_CATEGORY_LABEL"
+				description="COM_YINGPIN_YINGPIN_FIELD_SHOW_CATEGORY_DESC"
+				default=""
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

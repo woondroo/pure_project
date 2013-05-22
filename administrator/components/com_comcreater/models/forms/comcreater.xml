@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_comcreater/models/rules"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		
+	
+		<field
+			name="title"
+			type="text"
+			label="组件命名"
+			description="输入组件命名com_xxx 只需要输入 xxx 即可"
+			size="40"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		<field
+			name="zhname"
+			type="text"
+			label="组件中文名"
+			description="输入组件中文名"
+			size="40"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		
+		<field
+			name="description"
+			type="editor"
+			class="inputbox"
+			label="组件功能简介"
+			description="组件功能简介"
+			filter="ContentHelper::filterText" 
+			buttons="true" 
+		/>
+		
+	</fieldset>
+	<fields name="params">
+		<fieldset
+			name="params"
+			label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS"
+		>
+			
+		</fieldset>
+	</fields>
+</form>

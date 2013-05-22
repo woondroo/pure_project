@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_SERVICE_SERVICES_VIEW_DEFAULT_TITLE" option="com_service_services_view_default_option">
+		<help
+			key="JHELP_MENUS_MENU_ITEM_SERVICE_SERVICES"
+		/>
+		<message>
+			<![CDATA[COM_SERVICE_SERVICES_VIEW_DEFAULT_DESC]]>
+		</message>
+	</layout>
+</metadata>

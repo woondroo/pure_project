@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_aclmanager/models/rules"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="title"
+			type="text"
+			label="目录标题"
+			description="输入目录标题"
+			size="40"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		<field
+			name="componenturl"
+			type="text"
+			label="组件访问路径"
+			description="输入组件访问路径（顶级目录无需填写）"
+			size="40"
+			class="inputbox"
+			default="index.php?option=com_"
+		/>
+		<field
+			name="element"
+			type="text"
+			label="组件名称"
+			description="用于判断是否有访问权限"
+			size="40"
+			class="inputbox"
+			required="true"
+			default="com_"
+		/>
+		<field
+			name="catid"
+			type="aclmanagercategories"
+			label="所属父类"
+			description="默认为顶级分类"
+			size="1"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		<field
+			name="ordering"
+			type="text"
+			label="排序"
+			description="输入排序"
+			size="40"
+			class="inputbox"
+			default="0"
+			required="true"
+		/>
+	</fieldset>
+</form>

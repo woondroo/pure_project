@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS `#__qlue404`;
+DROP TABLE IF EXISTS `#__qlue404_links`;

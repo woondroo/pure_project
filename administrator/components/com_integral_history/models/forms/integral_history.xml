@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_integral_history/models/rules"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+			default=""
+		/>
+		<field
+			name="pid"
+			type="text"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_PID_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_PID_DESC"
+			size="40"
+			class="readonly"
+			readonly="true"
+			default="0"
+		/>
+		<field
+			name="uid"
+			type="text"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_UID_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_UID_DESC"
+			size="40"
+			class="readonly"
+			readonly="true"
+			default="0"
+		/>
+		<field
+			name="reason"
+			type="text"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_REASON_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_REASON_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			required="true"
+		/>
+		<field
+			name="use"
+			type="text"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_USE_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_USE_DESC"
+			size="40"
+			class="readonly"
+			readonly="true"
+			default="0"
+		/>
+		<field
+			name="get"
+			type="text"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_GET_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_GET_DESC"
+			size="40"
+			class="readonly"
+			readonly="true"
+			default="0"
+		/>
+		<field
+			name="last"
+			type="text"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_LAST_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_LAST_DESC"
+			size="40"
+			class="readonly"
+			readonly="true"
+			default=""
+		/>
+		<field 
+			name="ordertime" 
+			type="calendar" 
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_ORDERTIME_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_ORDERTIME_DESC"
+			class="readonly"
+			readonly="true"
+			format="%Y-%m-%d %H:%M:%S"
+			size="22"
+			filter="user_utc"
+		/>
+		<field 
+			name="receivetime" 
+			type="calendar" 
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_RECEIVETIME_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_RECEIVETIME_DESC"
+			class="readonly"
+			readonly="true"
+			format="%Y-%m-%d %H:%M:%S"
+			size="22"
+			filter="user_utc"
+		/>
+		<field 
+			name="completetime" 
+			type="calendar" 
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_COMPLETETIME_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_COMPLETETIME_DESC"
+			class="readonly"
+			readonly="true"
+			format="%Y-%m-%d %H:%M:%S"
+			size="22"
+			filter="user_utc"
+		/>
+		<field
+			name="state"
+			type="radio"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_STATE_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_STATE_DESC"
+			default="0"
+		>
+			<option value="-1">已取消</option>
+			<option value="0">待领取</option>
+			<option value="1">已领取</option>
+			<option value="2">已完成</option>
+		</field>
+		<field
+			name="way"
+			type="radio"
+			label="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_WAY_LABEL"
+			description="COM_INTEGRAL_HISTORY_INTEGRAL_HISTORY_FIELD_WAY_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+		>
+			<option value="0">积分获得</option>
+			<option value="1">积分使用</option>
+		</field>
+	</fieldset>
+</form>

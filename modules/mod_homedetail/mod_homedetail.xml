@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_homedetail</name>
+	<author>Woondroo</author>
+	<creationDate>April 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>首页详细展示</description>
+	<files>
+	<filename module="mod_homedetail">mod_homedetail.php</filename>
+	<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_homedetail.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_homedetail.ini</language>
+		<language tag="en-GB">en-GB.mod_homedetail.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_HOMEDETAIL" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_switchcontent"
+					default="0"
+					label="数据来源"
+					description="选择数据来源，默认获取该分类来源下的第一条">
+				</field>
+				<field
+					name="module_alias"
+					type="text"
+					default="company"
+					label="别名"
+					description="设置详细展示区的别名便于 CSS 和 JS 控制">
+				</field>
+				<field
+					name="module_link"
+					type="radio"
+					default="1"
+					label="展示区使用链接"
+					description="设置展示区是否使用链接，如果不使用则会取消所有链接">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="module_link_open"
+					type="radio"
+					default="0"
+					label="展示区链接打开方式"
+					description="设置展示区链接的打开方式">
+					<option value="0">当前窗口</option>
+					<option value="1">新窗口</option>
+				</field>
+				<field
+					name="module_width"
+					type="text"
+					default="300px"
+					label="展示区整体宽度"
+					description="设置该模块展示区的整体宽度">
+				</field>
+				<field
+					name="module_top_bg"
+					type="text"
+					default=""
+					label="头部背景坐标"
+					description="输入头部背景坐标"
+					size="10">
+				</field>
+				<field
+					name="module_content_bg"
+					type="text"
+					default=""
+					label="内容背景坐标"
+					description="输入内容背景坐标"
+					size="10">
+				</field>
+				<!--
+				<field
+					name="modulebg_x"
+					type="radio"
+					default="2"
+					label="背景图横向布局"
+					description="设置背景图的横向布局">
+					<option value="1">JL</option>
+					<option value="2">JC</option>
+					<option value="3">JR</option>
+				</field>
+				<field
+					name="modulebg_y"
+					type="radio"
+					default="1"
+					label="背景图纵向布局"
+					description="设置背景图的纵向布局">
+					<option value="1">JT</option>
+					<option value="2">JC</option>
+					<option value="3">JB</option>
+				</field>
+				-->
+				<field
+					name="topbt_show"
+					type="radio"
+					default="1"
+					label="顶部标题是否显示"
+					description="设置是否显示顶部标题，包括“更多按钮”">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="topbt_text"
+					type="text"
+					default=""
+					label="顶部标题"
+					description="填写顶部标题">
+				</field>
+				<field
+					name="topbt_height"
+					type="text"
+					default="30px"
+					label="顶部标题高度"
+					description="设置顶部标题的高度">
+				</field>
+				<field
+					name="topbt_margin"
+					type="text"
+					default="0 10 0 10"
+					label="顶部标题四项偏移"
+					description="设置顶部标题的四项偏移，依次为：上 右 下 作，没有偏移填写为 0 即可，如：0 10 0 10，单位为px">
+				</field>
+				
+				<field
+					name="more_show"
+					type="radio"
+					default="1"
+					label="更多按钮是否显示"
+					description="设置是否显示更多按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="more_text"
+					type="text"
+					default="More"
+					label="更多按钮文字"
+					description="当需要文字时，设置显示的文字">
+				</field>
+				<field
+					name="more_showtext"
+					type="radio"
+					default="1"
+					label="更多按钮显示文字"
+					description="设置是否显示更多按钮的文字">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="more_width"
+					type="text"
+					default="50px"
+					label="更多按钮宽度"
+					description="设置更多按钮宽度">
+				</field>
+				<field
+					name="more_height"
+					type="text"
+					default="20px"
+					label="更多按钮高度"
+					description="设置更多按钮高度">
+				</field>
+				<field
+					name="more_bg"
+					type="text"
+					default=""
+					label="更多按钮背景坐标"
+					description="填写更多按钮背景坐标"
+					size="10">
+				</field>
+				<field
+					name="more_link"
+					type="text"
+					default=""
+					label="更多按钮链接"
+					size="37"
+					description="设置“更多按钮”的超链接">
+				</field>
+				<field
+					name="more_pos"
+					type="radio"
+					default="2"
+					label="更多按钮位置"
+					description="设置更多按钮位置">
+					<option value="1">JL</option>
+					<option value="2">JR</option>
+				</field>
+				
+				<field
+					name="content_height"
+					type="text"
+					default="300px"
+					label="内容区高度"
+					description="设置内容区的高度">
+				</field>
+				<field
+					name="content_margin"
+					type="text"
+					default="0 10 0 10"
+					label="内容区四项偏移"
+					description="设置内容区的四项偏移，依次为：上 右 下 作，没有偏移填写为 0 即可，如：0 10 0 10，单位为px">
+				</field>
+				
+				<field
+					name="image_pos"
+					type="radio"
+					default="1"
+					label="图片位置"
+					description="设置详细展示中图片的所在位置">
+					<option value="1">JL</option>
+					<option value="2">JT</option>
+					<option value="3">JR</option>
+					<option value="4">JB</option>
+				</field>
+				<field
+					name="image_width"
+					type="text"
+					default="100px"
+					label="图片宽度"
+					description="设置图片宽度">
+				</field>
+				<field
+					name="image_height"
+					type="text"
+					default="300px"
+					label="图片高度"
+					description="设置图片高度">
+				</field>
+				<field
+					name="image_link"
+					type="text"
+					default=""
+					label="图片链接"
+					size="37"
+					description="设置图片的超链接">
+				</field>
+				
+				<field
+					name="desc_show"
+					type="radio"
+					default="1"
+					label="描述是否显示"
+					description="设置描述是否显示">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="desc_length"
+					type="text"
+					default="50"
+					label="描述字数限制(字符)"
+					description="设置描述区域的字数限制">
+				</field>
+				<field
+					name="desc_width"
+					type="text"
+					default="190px"
+					label="描述区域宽度"
+					description="设置描述区域宽度">
+				</field>
+				<field
+					name="desc_height"
+					type="text"
+					default="300px"
+					label="描述区域高度"
+					description="设置描述区域高度">
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

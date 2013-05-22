@@ -1,0 +1,18 @@
+/**
+ * 2012-02-24 wengebin Add
+ */
+内核修改可直接使用Eclipse的搜索功能搜索“wengebin”即可得到内核修改的位置！
+
+#2012-02-20 oMeSe
+joomla\application\component\controlleradmin.php
+加入方法:topthis saveordering
+
+joomla\application\component\modellist.php
+加入方法:getAllItems
+
+字段过滤位于（比如过滤 <object>标签）：
+libraires/joomla/filter/filterinput.php
+新增：NOCLEAR - 不限制任何标签，为了使用flash视频
+case 'NOCLEAR' :
+	$result = $source;
+	break;

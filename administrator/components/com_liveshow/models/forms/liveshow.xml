@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_liveshow/models/rules"
+>
+	<fieldset name="details">
+		<field
+			name="id"
+			type="hidden"
+			default=""
+		/>
+		<field
+			name="title"
+			type="text"
+			label="COM_LIVESHOW_LIVESHOW_FIELD_TITLE_LABEL"
+			description="COM_LIVESHOW_LIVESHOW_FIELD_TITLE_DESC"
+			size="40"
+			class="inputbox"
+			default=""
+			required="true"
+		/>
+		<field
+			name="description"
+			type="textarea"
+			label="COM_LIVESHOW_LIVESHOW_FIELD_DESCRIPTION_LABEL"
+			description="COM_LIVESHOW_LIVESHOW_FIELD_DESCRIPTION_DESC"
+			rows="10"
+			cols="50"
+		/>
+		<field
+			name="image"
+			type="media"
+			label="COM_LIVESHOW_LIVESHOW_FIELD_IMAGE_LABEL"
+			description="COM_LIVESHOW_LIVESHOW_FIELD_IMAGE_DESC"
+			required="true"
+		/>
+		<field
+			name="catid"
+			type="category"
+			extension="com_liveshow"
+			class="inputbox"
+			default="127"
+			label="COM_LIVESHOW_LIVESHOW_FIELD_CATID_LABEL"
+			description="COM_LIVESHOW_LIVESHOW_FIELD_CATID_DESC"
+			required="true"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		<field
+			name="published"
+			type="radio"
+			default="1"
+			label="COM_LIVESHOW_LIVESHOW_FIELD_PUBLISHED_LABEL"
+			description="COM_LIVESHOW_LIVESHOW_FIELD_PUBLISHED_DESC">
+			<option
+				value="1">JYES</option>
+			<option
+				value="0">JNO</option>
+		</field>
+		<field
+			name="ordering"
+			type="text"
+			label="COM_LIVESHOW_LIVESHOW_FIELD_ORDERING_LABEL"
+			description="COM_LIVESHOW_LIVESHOW_FIELD_ORDERING_DESC"
+			size="40"
+			class="inputbox"
+			default="0"
+			required="true"
+		/>
+		</fieldset>
+	<fields name="params">
+		<fieldset
+			name="params"
+			label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS"
+		>
+			<field
+				name="show_category"
+				type="list"
+				label="COM_LIVESHOW_LIVESHOW_FIELD_SHOW_CATEGORY_LABEL"
+				description="COM_LIVESHOW_LIVESHOW_FIELD_SHOW_CATEGORY_DESC"
+				default=""
+			>
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

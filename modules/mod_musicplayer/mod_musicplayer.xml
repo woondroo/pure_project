@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_musicplayer</name>
+	<author>Woondroo</author>
+	<creationDate>May 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>音乐播放器</description>
+	<files>
+		<filename module="mod_musicplayer">mod_musicplayer.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>mod_musicplayer.xml</filename>
+	</files>
+	<languages>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MUSICPLAYER" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="music1"
+					type="media"
+					label="第一首歌曲"
+					description="第一首歌曲"
+					size="40"
+				/>
+				<field
+					name="music2"
+					type="media"
+					label="第二首歌曲"
+					description="第二首歌曲"
+					size="40"
+				/>
+				<field
+					name="music3"
+					type="media"
+					label="第三首歌曲"
+					description="第三首歌曲"
+					size="40"
+				/>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

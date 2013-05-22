@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_homelist</name>
+	<author>Woondroo</author>
+	<creationDate>April 2012</creationDate>
+	<copyright>Power by Woondroo!</copyright>
+	<license>No license!</license>
+	<authorEmail>wengebin@hotmail.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>首页列表展示</description>
+	<files>
+	<filename module="mod_homelist">mod_homelist.php</filename>
+	<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_homelist.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_homelist.ini</language>
+		<language tag="en-GB">en-GB.mod_homelist.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_HOMELIST" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="listway" type="homelistfill"
+					default="i-i-i"
+					label="排列方式"
+					description="设置展示数据的排列方式"
+					required="true">
+					
+					<option id="1" src="templates/system/images/home_listway/i-i-i.png" value="i-i-i" params="{count:2,module_mix:0,module_width:'302px',content_height:'160px',content_margin:'0 0 0 0',item_width:'302px',item_height:'80px',other_item_width:'',other_item_height:'',image_pos:1,image_width:'302px',image_height:'80px',other_image_width:'',other_image_height:'',date_pos:1,date_width:'0',date_height:'0',date_end:'日',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'0',title_width:'0',title_height:'0',other_title_length:'',other_title_width:'',other_title_height:'',desc_length:'0',desc_width:'0',desc_heigh:'0',other_desc_length:'',other_desc_width:'',other_desc_height:'',image_list_scroll_num:'0',image_list_bt_width:'0',image_list_bt_height:'0',image_list_bt_margin:'0',image_list_anim_time:'0',create_title_pre:''}" title="从上到下全图片展示(不滚动)"></option>
+					<option id="2" src="templates/system/images/home_listway/i-t-d.png" value="i-t-d" params="{count:2,module_mix:0,module_width:'302px',content_height:'160px',content_margin:'0 0 0 0',item_width:'302px',item_height:'80px',other_item_width:'',other_item_height:'',image_pos:1,image_width:'80px',image_height:'80px',other_image_width:'',other_image_height:'',date_pos:1,date_width:'70px',date_height:'20px',date_end:'日',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'16',title_width:'210px',title_height:'30px',other_title_length:'',other_title_width:'',other_title_height:'',desc_length:'32',desc_width:'210px',desc_heigh:'40px',other_desc_length:'',other_desc_width:'',other_desc_height:'',image_list_scroll_num:'0',image_list_bt_width:'0',image_list_bt_height:'0',image_list_bt_margin:'0',image_list_anim_time:'0',create_title_pre:''}" title="图片+标题+描述"></option>
+					<option id="3" src="templates/system/images/home_listway/bd-t-d.png" value="bd-t-d" params="{count:2,module_mix:1,module_width:'302px',content_height:'160px',content_margin:'0 0 0 0',item_width:'302px',item_height:'80px',other_item_width:'',other_item_height:'',image_pos:1,image_width:'0',image_height:'0',other_image_width:'',other_image_height:'',date_pos:1,date_width:'80px',date_height:'80px',date_end:'日',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'16',title_width:'210px',title_height:'30px',other_title_length:'',other_title_width:'',other_title_height:'',desc_length:'32',desc_width:'210px',desc_heigh:'40px',other_desc_length:'',other_desc_width:'',other_desc_height:'',image_list_scroll_num:'0',image_list_bt_width:'0',image_list_bt_height:'0',image_list_bt_margin:'0',image_list_anim_time:'0',create_title_pre:''}" title="日期+标题+描述"></option>
+					<option id="4" src="templates/system/images/home_listway/i-tt-dd.png" value="i-tt-dd" params="{count:4,module_mix:0,module_width:'302px',content_height:'160px',content_margin:'0 0 0 0',item_width:'302px',item_height:'20px',other_item_width:'302px',other_item_height:'84px',image_pos:1,image_width:'80px',image_height:'80px',other_image_width:'110px',other_image_height:'84px',date_pos:1,date_width:'78px',date_height:'20px',date_end:'日',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'16',title_width:'210px',title_height:'20px',other_title_length:'12',other_title_width:'178px',other_title_height:'21px',desc_length:'0',desc_width:'0',desc_heigh:'0',other_desc_length:'40',other_desc_width:'178px',other_desc_height:'60px',image_list_scroll_num:'0',image_list_bt_width:'0',image_list_bt_height:'0',image_list_bt_margin:'0',image_list_anim_time:'0',create_title_pre:''}" title="图片+日期(小)+标题(混)+描述"></option>
+					<option id="5" src="templates/system/images/home_listway/i-ii-il.png" value="i-ii-il" params="{count:6,module_mix:0,module_width:'302px',content_height:'160px',content_margin:'0 0 0 0',item_width:'90px',item_height:'160px',other_item_width:'',other_item_height:'',image_pos:1,image_width:'86px',image_height:'126px',other_image_width:'',other_image_height:'',date_pos:1,date_width:'0',date_height:'0',date_end:'日',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'0',title_width:'0',title_height:'0',other_title_length:'',other_title_width:'',other_title_height:'',desc_length:'0',desc_width:'0',desc_heigh:'0',other_desc_length:'',other_desc_width:'',other_desc_height:'',image_list_scroll_num:'3',image_list_bt_width:'14px',image_list_bt_height:'21px',image_list_bt_margin:'2px',image_list_anim_time:'500',create_title_pre:''}" title="图片左右滚动展示"></option>
+					<option id="6" src="templates/system/images/home_listway/i-id-il.png" value="i-id-il" params="{count:6,module_mix:0,module_width:'302px',content_height:'160px',content_margin:'0 0 0 0',item_width:'90px',item_height:'160px',other_item_width:'',other_item_height:'',image_pos:1,image_width:'86px',image_height:'86px',other_image_width:'',other_image_height:'',date_pos:1,date_width:'0',date_height:'0',date_end:'日',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'0',title_width:'0',title_height:'0',other_title_length:'',other_title_width:'',other_title_height:'',desc_length:'13',desc_width:'86px',desc_heigh:'40px',other_desc_length:'',other_desc_width:'',other_desc_height:'',image_list_scroll_num:'3',image_list_bt_width:'14px',image_list_bt_height:'21px',image_list_bt_margin:'2px',image_list_anim_time:'500',create_title_pre:''}" title="图片(带描述)左右滚动展示"></option>
+					<option id="7" src="templates/system/images/home_listway/i-t-dt.png" value="i-t-dt" params="{count:3,module_mix:0,module_width:'872px',content_height:'480px',content_margin:'0 0 0 0',item_width:'280px',item_height:'480px',other_item_width:'',other_item_height:'',image_pos:1,image_width:'280px',image_height:'420px',other_image_width:'',other_image_height:'',date_pos:1,date_width:'269px',date_height:'12px',date_end:'TIME：',other_date_width:'',other_date_height:'',other_date_end:'',other_date_bg:'',title_length:'18',title_width:'269px',title_height:'12px',other_title_length:'',other_title_width:'269px',other_title_height:'18px',desc_length:'0',desc_width:'0',desc_heigh:'0',other_desc_length:'',other_desc_width:'',other_desc_height:'',image_list_scroll_num:'0',image_list_bt_width:'0',image_list_bt_height:'0',image_list_bt_margin:'0',image_list_anim_time:'0',create_title_pre:'LATEST_WORK.'}" title="图片+标题(生成)+日期+标题"></option>
+				</field>
+				<field
+					name="catid"
+					type="category"
+					extension="com_switchcontent"
+					default="0"
+					label="数据来源"
+					description="选择数据来源，默认获取该分类来源下的第一条">
+				</field>
+				<field
+					name="count"
+					type="text"
+					default="2"
+					size="2"
+					label="数据条数"
+					description="设置需要显示的数据数量">
+				</field>
+				<field
+					name="module_mix"
+					type="radio"
+					default="0"
+					label="是否交叉排列"
+					description="设置说获取的数据是否交叉排列，比如：第一条的图片排在左侧，那么第二条的图片则排在右侧，第三条排在左侧...">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="module_alias"
+					type="text"
+					default="company"
+					label="别名"
+					description="设置详细展示区的别名便于 CSS 和 JS 控制">
+				</field>
+				<field
+					name="module_link"
+					type="radio"
+					default="1"
+					label="展示区使用链接"
+					description="设置展示区是否使用链接，如果不使用则会取消所有链接">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="module_link_open"
+					type="radio"
+					default="0"
+					label="展示区链接打开方式"
+					description="设置展示区链接的打开方式">
+					<option value="0">当前窗口</option>
+					<option value="1">新窗口</option>
+				</field>
+				<field
+					name="module_width"
+					type="text"
+					default="300px"
+					label="展示区整体宽度"
+					description="设置该模块展示区的整体宽度">
+				</field>
+				<field
+					name="module_top_bg"
+					type="text"
+					default=""
+					label="头部背景坐标"
+					description="输入头部背景坐标"
+					size="10">
+				</field>
+				<field
+					name="module_content_bg"
+					type="text"
+					default=""
+					label="内容背景坐标"
+					description="输入内容背景坐标"
+					size="10">
+				</field>
+				<!--
+				<field
+					name="modulebg_x"
+					type="radio"
+					default="2"
+					label="背景图横向布局"
+					description="设置背景图的横向布局">
+					<option value="1">JL</option>
+					<option value="2">JC</option>
+					<option value="3">JR</option>
+				</field>
+				<field
+					name="modulebg_y"
+					type="radio"
+					default="1"
+					label="背景图纵向布局"
+					description="设置背景图的纵向布局">
+					<option value="1">JT</option>
+					<option value="2">JC</option>
+					<option value="3">JB</option>
+				</field>
+				-->
+				<field
+					name="topbt_show"
+					type="radio"
+					default="1"
+					label="顶部标题是否显示"
+					description="设置是否显示顶部标题，包括“更多按钮”">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="topbt_text"
+					type="text"
+					default=""
+					label="顶部标题"
+					description="填写顶部标题">
+				</field>
+				<field
+					name="topbt_height"
+					type="text"
+					default="30px"
+					label="顶部标题高度"
+					description="设置顶部标题的高度">
+				</field>
+				<field
+					name="topbt_margin"
+					type="text"
+					default="0 10 0 10"
+					label="顶部标题四项偏移"
+					description="设置顶部标题的四项偏移，依次为：上 右 下 作，没有偏移填写为 0 即可，如：0 10 0 10，单位为px">
+				</field>
+				
+				<field
+					name="more_show"
+					type="radio"
+					default="1"
+					label="更多按钮是否显示"
+					description="设置是否显示更多按钮">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="more_text"
+					type="text"
+					default="More"
+					label="更多按钮文字"
+					description="当需要文字时，设置显示的文字">
+				</field>
+				<field
+					name="more_showtext"
+					type="radio"
+					default="1"
+					label="更多按钮显示文字"
+					description="设置是否显示更多按钮的文字">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="more_width"
+					type="text"
+					default="50px"
+					label="更多按钮宽度"
+					description="设置更多按钮宽度">
+				</field>
+				<field
+					name="more_height"
+					type="text"
+					default="20px"
+					label="更多按钮高度"
+					description="设置更多按钮高度">
+				</field>
+				<field
+					name="more_bg"
+					type="text"
+					default=""
+					label="更多按钮背景坐标"
+					description="填写更多按钮背景坐标"
+					size="10">
+				</field>
+				<field
+					name="more_link"
+					type="text"
+					default=""
+					label="更多按钮链接"
+					size="37"
+					description="设置“更多按钮”的超链接">
+				</field>
+				<field
+					name="more_pos"
+					type="radio"
+					default="2"
+					label="更多按钮位置"
+					description="设置更多按钮位置">
+					<option value="1">JL</option>
+					<option value="2">JR</option>
+				</field>
+				
+				<field
+					name="content_height"
+					type="text"
+					default="300px"
+					label="内容区高度"
+					description="设置内容区的高度">
+				</field>
+				<field
+					name="content_margin"
+					type="text"
+					default="0 10 0 10"
+					label="内容区四项偏移"
+					description="设置内容区的四项偏移，依次为：上 右 下 作，没有偏移填写为 0 即可，如：0 10 0 10，单位为px">
+				</field>
+				
+				<field
+					name="item_width"
+					type="text"
+					default="300px"
+					label="每条数据占用宽度"
+					description="设置每条数据需要占用页面的宽度">
+				</field>
+				<field
+					name="item_height"
+					type="text"
+					default="100px"
+					label="每条数据占用高度"
+					description="设置每条数据需要占用页面的高度">
+				</field>
+				<field
+					name="other_item_width"
+					type="text"
+					default=""
+					label="特殊数据占用宽度"
+					description="设置特殊数据需要占用页面的宽度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				<field
+					name="other_item_height"
+					type="text"
+					default=""
+					label="特殊数据占用高度"
+					description="设置特殊数据需要占用页面的高度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				
+				<field
+					name="image_pos"
+					type="radio"
+					default="1"
+					label="图片位置"
+					description="设置详细展示中图片的所在位置">
+					<option value="1">JL</option>
+					<option value="2">JR</option>
+				</field>
+				<field
+					name="image_width"
+					type="text"
+					default="80px"
+					label="图片宽度"
+					description="设置图片宽度">
+				</field>
+				<field
+					name="image_height"
+					type="text"
+					default="80px"
+					label="图片高度"
+					description="设置图片高度">
+				</field>
+				<field
+					name="other_image_width"
+					type="text"
+					default=""
+					label="特殊图片宽度"
+					description="设置特殊图片的宽度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				<field
+					name="other_image_height"
+					type="text"
+					default=""
+					label="特殊图片高度"
+					description="设置特殊图片的高度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				
+				<field
+					name="date_pos"
+					type="radio"
+					default="1"
+					label="日期位置"
+					description="设置详细展示中日期的所在位置">
+					<option value="1">JL</option>
+					<option value="2">JR</option>
+				</field>
+				<field
+					name="date_width"
+					type="text"
+					default="70px"
+					label="日期宽度"
+					description="设置日期宽度">
+				</field>
+				<field
+					name="date_height"
+					type="text"
+					default="20px"
+					label="日期高度"
+					description="设置日期高度">
+				</field>
+				<field
+					name="date_end"
+					type="text"
+					default="日"
+					label="日期后缀"
+					description="设置日期的后缀">
+				</field>
+				<field
+					name="date_bg"
+					type="text"
+					default=""
+					label="时间按钮的背景"
+					description="上传时间按钮的背景图"
+					size="10">
+				</field>
+				<field
+					name="other_date_width"
+					type="text"
+					default=""
+					label="特殊日期宽度"
+					description="设置特殊日期的宽度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				<field
+					name="other_date_height"
+					type="text"
+					default=""
+					label="特殊日期高度"
+					description="设置特殊日期的高度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				<field
+					name="other_date_end"
+					type="text"
+					default=""
+					label="特殊日期后缀"
+					description="设置特殊日期的后缀">
+				</field>
+				<field
+					name="other_date_bg"
+					type="text"
+					default=""
+					label="特殊时间按钮背景"
+					description="上传特殊时间按钮的背景图"
+					size="10">
+				</field>
+				
+				<field
+					name="title_length"
+					type="text"
+					default="20"
+					label="标题字数限制(字符)"
+					description="设置标题区域的字数限制">
+				</field>
+				<field
+					name="title_width"
+					type="text"
+					default="190px"
+					label="标题区域宽度"
+					description="设置标题区域宽度">
+				</field>
+				<field
+					name="title_height"
+					type="text"
+					default="25px"
+					label="标题区域高度"
+					description="设置标题区域高度">
+				</field>
+				<field
+					name="other_title_length"
+					type="text"
+					default=""
+					label="特殊标题字数(字符)"
+					description="设置特殊标题的字数限制，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的字数">
+				</field>
+				<field
+					name="other_title_width"
+					type="text"
+					default=""
+					label="特殊标题宽度"
+					description="设置特殊标题的宽度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				<field
+					name="other_title_height"
+					type="text"
+					default=""
+					label="特殊标题高度"
+					description="设置特殊标题的高度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				
+				<field
+					name="desc_length"
+					type="text"
+					default="50"
+					label="描述字数限制(字符)"
+					description="设置描述区域的字数限制">
+				</field>
+				<field
+					name="desc_width"
+					type="text"
+					default="190px"
+					label="描述区域宽度"
+					description="设置描述区域宽度">
+				</field>
+				<field
+					name="desc_height"
+					type="text"
+					default="40px"
+					label="描述区域高度"
+					description="设置描述区域高度">
+				</field>
+				<field
+					name="other_desc_length"
+					type="text"
+					default=""
+					label="特殊描述字数(字符)"
+					description="设置特殊描述的字数限制，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的字数">
+				</field>
+				<field
+					name="other_desc_width"
+					type="text"
+					default=""
+					label="特殊描述宽度"
+					description="设置特殊描述的宽度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				<field
+					name="other_desc_height"
+					type="text"
+					default=""
+					label="特殊描述高度"
+					description="设置特殊描述的高度，比如：“图片+日期(小)+标题(混)+描述”排列中有一行数据比较特殊，需要特定的宽高">
+				</field>
+				
+				<field
+					name="image_list_scroll_num"
+					type="text"
+					default="3"
+					label="图片滚动显示个数"
+					description="设置图片滚动时可见的图片数量">
+				</field>
+				<field
+					name="image_list_bt_width"
+					type="text"
+					default="20px"
+					label="图片滚动按钮宽度"
+					description="设置图片滚动按钮宽度">
+				</field>
+				<field
+					name="image_list_bt_height"
+					type="text"
+					default="20px"
+					label="图片滚动按钮高度"
+					description="设置图片滚动按钮高度">
+				</field>
+				<field
+					name="image_list_bt_margin"
+					type="text"
+					default="10px"
+					label="图片滚动按钮偏移"
+					description="设置图片滚动按钮与滚动图片之间的偏移距离">
+				</field>
+				<field
+					name="image_list_bt_bg"
+					type="text"
+					default=""
+					label="图片滚动按钮背景"
+					description="上传图片滚动按钮背景图"
+					size="10">
+				</field>
+				<field
+					name="image_list_anim_time"
+					type="text"
+					default="500"
+					label="图片滚动动画时间"
+					description="点击按钮切换动画的运动时间(单位:ms)">
+				</field>
+				<field
+					name="create_title_pre"
+					type="text"
+					default=""
+					label="自动标题前缀"
+					description="设定自动生成标题的前缀">
+				</field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

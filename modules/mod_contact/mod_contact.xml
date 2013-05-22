@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.7"
+	client="site"
+	method="upgrade">
+	<name>mod_contact</name>
+	<author>omese</author>
+	<creationDate>November 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2011 Woondroo. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>omese@qq.com</authorEmail>
+	<authorUrl>www.d-niu.com</authorUrl>
+	<version>1.7.0</version>
+	<description>MOD_CONTACT_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_footer">mod_contact.php</filename>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>		
+		<filename>mod_contact.xml</filename>
+	</files>
+	<languages>
+		<language tag="zh-CN">zh-CN.mod_contact.ini</language>
+		<language tag="zh-CN">zh-CN.mod_contact.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_CONTACT" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="tipicon"
+					type="text"
+					size="10"
+					label="标签背景图标"
+					description="输入标签背景图标坐标"
+					default=""
+				/>
+				<field
+					name="tipwidth"
+					type="text"
+					label="标签背景图标宽度"
+					description="输入标签背景图标宽度"
+					default=""
+				/>
+				<field
+					name="tipheight"
+					type="text"
+					label="标签背景图标高度"
+					description="输入标签背景图标高度"
+					default=""
+				/>
+				
+				<field
+					name="inputbg"
+					type="text"
+					size="10"
+					label="输入框背景"
+					description="填写输入框背景坐标"
+					default=""
+				/>
+				<field
+					name="inputwidth"
+					type="text"
+					label="输入框背景宽度"
+					description="输入框背景宽度"
+					default=""
+				/>
+				<field
+					name="inputheight"
+					type="text"
+					label="输入框背景高度"
+					description="输入框背景高度"
+					default=""
+				/>
+				<field
+					name="inputpadding"
+					type="text"
+					label="输入框内框留白"
+					description="设置输入框的四项留白，依次为：上 右 下 作，不留白则填写为 0 即可，如：0 10 0 10，单位为px"
+					default=""
+				/>
+				
+				<field
+					name="textareabg"
+					type="text"
+					size="10"
+					label="文本框背景"
+					description="填写文本框背景坐标"
+					default=""
+				/>
+				<field
+					name="textareawidth"
+					type="text"
+					label="文本框背景宽度"
+					description="文本框背景宽度"
+					default=""
+				/>
+				<field
+					name="textareaheight"
+					type="text"
+					label="文本框背景高度"
+					description="文本框背景高度"
+					default=""
+				/>
+				<field
+					name="textareapadding"
+					type="text"
+					label="文本框内框留白"
+					description="设置文本框的四项留白，依次为：上 右 下 作，不留白则填写为 0 即可，如：0 10 0 10，单位为px"
+					default=""
+				/>
+				
+				<field
+					name="btbg"
+					type="text"
+					size="10"
+					label="按钮背景"
+					description="按钮背景坐标"
+					default=""
+				/>
+				<field
+					name="btwidth"
+					type="text"
+					label="按钮背景宽度"
+					description="按钮背景宽度"
+					default=""
+				/>
+				<field
+					name="btheight"
+					type="text"
+					label="按钮背景高度"
+					description="按钮背景高度"
+					default=""
+				/>
+				
+				<field
+					name="address"
+					type="text"
+					label="公司地址"
+					description="输入公司地址"
+					size="40"
+					class="inputbox"
+					default=""
+					
+				/>
+				<field
+					name="ucode"
+					type="text"
+					label="邮编"
+					description="输入邮编"
+					size="40"
+					class="inputbox"
+					default=""
+					
+				/>
+				<field
+					name="phone"
+					type="text"
+					label="联系电话"
+					description="输入联系电话"
+					size="40"
+					class="inputbox"
+					default=""
+					
+				/>
+				<field
+					name="fex"
+					type="text"
+					label="公司传真"
+					description="输入公司传真"
+					size="40"
+					class="inputbox"
+					default=""
+					
+				/>
+				<field
+					name="email"
+					type="text"
+					label="E-mail"
+					description="输入联系人Email"
+					size="40"
+					class="inputbox"
+					default=""
+				/>
+			</fieldset>
+		
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
