@@ -5,7 +5,7 @@
 	<author>wengebin</author>
 	<copyright>©2008-2012 Woondroo</copyright>
 	<authorEmail>wengebin@hotmail.com</authorEmail>
-	<authorUrl>www.d-niu.com</authorUrl>
+	<authorUrl>www.eiodesign.com</authorUrl>
 	<version>1.7.0</version>
 	<description>
 		用于给网站测试时到计时，如果到期了，网站将不能再被访问。如果在模板文件要删除JOOMLA在前台自动导入的脚本mootools.js,caption.js，请用以下代码(否则插件不能正常工作)

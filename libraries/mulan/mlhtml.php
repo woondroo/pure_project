@@ -342,7 +342,7 @@ class MulanHtmlUtil extends JObject{
 	
 	/**
 	 * 得到当前的域名，
-	 * 当url为http://www.d-niu.com/时，得到域名为d-niu.com
+	 * 当url为http://www.eiodesign.com/时，得到域名为eiodesign.com
 	 */
 	static function getDomain(){
 		$url = JURI::base();

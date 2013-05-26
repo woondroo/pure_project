@@ -77,7 +77,7 @@ require_once('assets/styles'.DS.'login.php');
 		<!--begin-->
 		<p class="copyright">
 		©2008-<?php echo date('Y'); ?> Power
-		<?php echo JText::_( 'TPL_BY' );?> <a target="_blank" href="http://www.d-niu.com" title="Woondroo">Woondroo</a>.
+		<?php echo JText::_( 'TPL_BY' );?> <a target="_blank" href="http://www.eiodesign.com" title="Woondroo">Woondroo</a>.
 		</p>
 		<!--end-->
 		<div class="clear">&nbsp;</div>

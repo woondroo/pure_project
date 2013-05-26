@@ -37,7 +37,7 @@ final class JPlatform
 	// Copyright Notice.
 	const COPYRIGHT = 'Copyright (C) 2008 - 2012 Open Source Matters, Inc. All rights reserved.';
 	// Link text.
-	const LINK_TEXT = 'Power by <a href="http://www.d-niu.com">Woondroo</a>.';
+	const LINK_TEXT = 'Power by <a href="http://www.eiodesign.com">Woondroo</a>.';
 
 	/**
 	 * Compares two a "PHP standardized" version number against the current Joomla Platform version.

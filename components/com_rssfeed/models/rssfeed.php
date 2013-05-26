@@ -53,7 +53,7 @@ class RssfeedModelRssfeed extends JModel
 		date_default_timezone_set("Asia/Shanghai");
 //		$get_date = date(DATE_RFC2822);
 //		$itemLink = 'index.php?option=com_announcement&view=announcement&Itemid=478&id=';
-		$base = 'http://www.d-niu.com';
+		$base = 'http://www.eiodesign.com';
 		
 		$feeds = MulanDBUtil::getObjectlistBySql('select * from #__announcement where published=1 order by id desc limit 10');
 		$last_feed = MulanDBUtil::getObjectBySql('select * from #__announcement where published=1 order by addtime desc limit 1');

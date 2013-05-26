@@ -47,7 +47,7 @@ final class JVersion
 	public $COPYRIGHT = 'Copyright (C) 2008 - 2012 Open Source Matters, Inc. All rights reserved.';
 
 	/** @var  string  Link text. */
-	public $URL = 'Power by <a href="http://www.d-niu.com">Woondroo</a>.';
+	public $URL = 'Power by <a href="http://www.eiodesign.com">Woondroo</a>.';
 
 	/**
 	 * Compares two a "PHP standardized" version number against the current Joomla version.

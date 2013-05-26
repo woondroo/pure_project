@@ -75,7 +75,7 @@ class JDocument extends JObject
 	 *
 	 * @var    string
 	 */
-	public $_generator = 'Woondroo - www.d-niu.com';
+	public $_generator = 'Woondroo - www.eiodesign.com';
 
 	/**
 	 * Document modified date

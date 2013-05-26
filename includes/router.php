@@ -218,7 +218,7 @@ class JRouterSite extends JRouter
 				 * 2012-09-26 wengebin edit!
 				 * 
 				 * 如果网站下的第一个别名未找到，不需要加载默认的“com_home”组件，
-				 * 比如：www.d-niu.com/oxox 这个目录，而 oxox 别名根本不存在，
+				 * 比如：www.eiodesign.com/oxox 这个目录，而 oxox 别名根本不存在，
 				 * 则需要跳转到 404 页面。
 				 */
 				header('location: '.MulanHtmlUtil::getUrlByAlias('404'));return;
