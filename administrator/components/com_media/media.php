@@ -17,7 +17,7 @@ $asset = JRequest::getCmd('asset');
 $author = JRequest::getCmd('author');
 
 $task = JRequest::getVar('task');
-$if_uncheck_authorise = $task == 'viewFolderImgs' || $task == 'viewFolderImgsAndDesc' || $task == 'deleteDir' || $task == 'deleteOneImg' || $task == 'deleteDirAndFiles';
+$if_uncheck_authorise = $task == 'file.swfupload' || 'viewFolderImgs' || $task == 'viewFolderImgsAndDesc' || $task == 'deleteDir' || $task == 'deleteOneImg' || $task == 'deleteDirAndFiles';
 if (!$if_uncheck_authorise) {
 	if (!$user->authorise('core.manage', 'com_media')
 		&& (!$asset or (!$user->authorise('core.edit', $asset)
